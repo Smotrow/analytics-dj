@@ -1,0 +1,51 @@
+.top-nav-bar {
+  position: fixed;
+  width: 100%;
+  background-color: $white-bg;
+
+  .container-fluid {
+    border-bottom: $border-light;
+    height: 51px;
+
+    .navbar-brand {
+      margin-bottom: -1px;
+      padding: 15px 1px;
+      color: $dark-color;
+    }
+
+    #main-logo {
+      padding: 5px 0;
+
+      img {
+        max-height: 100%;
+        background: center center;
+      }
+    }
+
+    #sub-logo {
+      margin: 1px 20px 0;
+      font-weight: 600;
+      border-bottom: 2px solid $primary-underline;
+    }
+
+    .nav {
+      .general-link {
+        margin: 8px;
+      }
+
+      > li > a {
+        color: $nav-color;
+
+        &.router-link-exact-active {
+          color: $default-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar-header {
+      margin-left: -5px;
+    }
+  }
+}

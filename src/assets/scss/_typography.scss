@@ -1,0 +1,45 @@
+.text-primary {
+  color: $primary-color;
+}
+
+.text-dark {
+  color: $dark-color;
+}
+
+.text-black {
+  color: $black-color;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: $dark-color;
+    text-decoration: none;
+  }
+
+  &.text-dark, &.text-black {
+    &:hover {
+      color: $white-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.none {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.link-icon {
+  font-size: 3rem;
+  color: $white-color;
+  &:hover {
+    color: $dark-color;
+  }
+}

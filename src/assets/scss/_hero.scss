@@ -1,0 +1,55 @@
+.hero-container {
+  height: 560px;
+  width: 100%;
+  background: url("/static/img/main-hero.png") top center;
+  background-size: cover;
+
+  .substrate {
+    height: 100%;
+    width: 100%;
+    color: $white-color;
+    text-align: justify;
+    background: url("/static/img/substrate.png") center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .bord-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 500px;
+      width: 50%;
+      max-width: 700px;
+      min-width: 300px;
+
+      .bord-header, .bord-content {
+        padding: 60px 0 40px;
+        @media (max-width: 988px) {
+          padding: 40px 0;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      background: url("/static/img/substrate.png") center left;
+      align-items: center;
+
+      .bord-info {
+        width: 75%;
+      }
+    }
+
+    .details-line {
+      height: 50px;
+      width: 100%;
+      background-color: $primary-dark-color;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}

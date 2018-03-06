@@ -1,0 +1,67 @@
+.promo-boards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  .promo-board {
+    height: 555px;
+    background: url("/static/img/main-hero.png") center center;
+    background-size: cover;
+    color: $white-color;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .details-line {
+      display: flex;
+      .details-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &.small {
+      width: 50%;
+      align-items: flex-start;
+      .details-line {
+        height: 65px;
+        width: 100%;
+        background: $gradient-left;
+        align-items: center;
+      }
+    }
+
+    &.big {
+      width: 100%;
+      align-items: flex-end;
+
+      .details-line {
+        height: 250px;
+        width: 33%;
+        min-width: 350px;
+        background: $gradient-bottom;
+        align-items: flex-end;
+        justify-content: space-between;
+        &.container-global {
+          padding: 15px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-boards-wrapper .promo-board {
+    &.small, &.big {
+      width: 100%;
+      align-items: flex-start;
+      .details-line {
+        height: 65px;
+        width: 100%;
+        background: $gradient-left;
+        align-items: center;
+      }
+    }
+  }
+}

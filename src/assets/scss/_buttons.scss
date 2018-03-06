@@ -1,0 +1,6 @@
+.btn {
+  border-radius: $border-radius-super-extreme;
+  &.btn-primary {
+    background-color: $primary-color;
+  }
+}

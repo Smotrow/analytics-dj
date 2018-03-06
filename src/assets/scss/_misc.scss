@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'AvantGardeGothicC-Demi';
+  src: url('../fonts/avantgardegothicc.otf') format('otf'),
+  url('../fonts/AvantGardeGothicC-Demi.otf') format('otf')
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: AvantGardeGothicC-Demi;
+}
+
+body {
+}
+
+.container-global {
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 988px) {
+  .container-fluid, .container-global {
+    padding: 0 100px;
+  }
+}
+
+.bg-gradient-left {
+  background: $gradient-left;
+}
+.bg-gradient-right {
+  background: $gradient-right;
+}
+.bg-gradient-top {
+  background: $gradient-top;
+}
+.bg-gradient-bottom {
+  background: $gradient-bottom;
+}
