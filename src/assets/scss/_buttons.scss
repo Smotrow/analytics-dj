@@ -4,3 +4,16 @@
     background-color: $primary-color;
   }
 }
+
+.arrow-link {
+  display: block;
+  height: 25px;
+  width: 25px;
+  background: url("/static/img/arrow.png") center center no-repeat;
+  background-size: contain;
+
+  &:hover{
+    background: url("/static/img/hover-arrow.png") center center no-repeat;
+    background-size: contain;
+  }
+}

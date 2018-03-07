@@ -3,13 +3,17 @@
     header
       hero-board(:needDetails="true")
         div(slot="header")
-          h3 {{textLess}}
-            font.text-primary  Lorem ipsum dolor
+          h3 Ми не даємо відповіді на запитання.
+            font.text-primary  Ми відшукуємо справедливість.
         div(slot="content")
-          p.none {{textMore}}
+          p.none Перший в
+            font.text-primary  Україні
+            |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
         div(slot="details")
-          p.none {{textLess}}
-            a.link.text-black  Lorem ipsum dolor
+          p.none.weight-3
+            font.weight-5 Останні новини
+            | | Analytics передбачив рішення судового споруб яке поставило під питання...
+            a.link.text-black.weight-5 Читати далі
     main
       promo-boards(:boards="promoBoards")
 </template>
@@ -28,19 +32,19 @@
         promoBoards: [
           {
             classSize: 'small',
-            text: 'Lorem ipsum dolor sit amet.',
+            text: 'Як працює Analytics?',
             mainImg: 'url("/static/img/asset-main-device.png")',
             link: 'main'
           }, {
             classSize: 'small',
-            text: 'Lorem ipsum dolor sit amet.',
+            text: 'Історії користувачів',
             bgImg: 'url("/static/img/asset-main-2.jpg")',
-            link: 'main'
+            link: 'stories'
           }, {
             classSize: 'big',
-            text: 'Lorem ipsum dolor sit amet.',
+            text: 'Про систему Analytics',
             bgImg: 'url("/static/img/asset-main-1.jpg")',
-            link: 'main'
+            link: 'about-system'
           }
         ],
         textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +

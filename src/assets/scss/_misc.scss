@@ -1,13 +1,15 @@
 @font-face {
   font-family: 'AvantGardeGothicC-Demi';
   src: url('../fonts/avantgardegothicc.otf') format('otf'),
-  url('../fonts/AvantGardeGothicC-Demi.otf') format('otf')
+  url('../fonts/AvantGardeGothicC-Demi.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: AvantGardeGothicC-Demi;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
 
 @media (min-width: 988px) {
   .container-fluid, .container-global {
-    padding: 0 100px;
+    padding: 0 50px;
   }
 }
 

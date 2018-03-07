@@ -7,8 +7,7 @@
           .text-block
             p.none {{board.text}}
           .link-block
-            router-link.link-icon(:to="board.link")
-              i.far.fa-arrow-alt-circle-right
+            router-link.arrow-link(:to="board.link")
 </template>
 
 <script>

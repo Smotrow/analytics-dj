@@ -27,19 +27,23 @@
     #sub-logo {
       margin: 1px 20px 0;
       font-weight: 600;
-      border-bottom: 2px solid $primary-underline;
+      &.router-link-exact-active {
+        border-bottom: 2px solid $primary-underline;
+      }
     }
 
     .nav {
       .general-link {
         margin: 8px 8px 8px 60px;
+        font-weight: 600;
       }
 
       > li > a {
+        font-weight: 600;
         color: $nav-color;
 
         &.router-link-exact-active {
-          color: $default-color;
+          border-bottom: 2px solid $primary-underline;
         }
       }
     }
