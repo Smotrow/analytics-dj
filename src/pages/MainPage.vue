@@ -12,6 +12,7 @@
             a.link.text-black  Lorem ipsum dolor
     main
       promo-boards(:boards="promoBoards")
+      p( v-for="n in 11") {{ n }} stories
 </template>
 
 <script>
@@ -29,17 +30,17 @@
           {
             classSize: 'small',
             text: 'Lorem ipsum dolor sit amet.',
-            bgImg: 'url("/static/img/main-hero.png")',
+            mainImg: 'url("/static/img/asset-main-device.png")',
             link: 'main'
           }, {
             classSize: 'small',
             text: 'Lorem ipsum dolor sit amet.',
-            bgImg: 'url("/static/img/main-hero.png")',
+            bgImg: 'url("/static/img/asset-main-2.jpg")',
             link: 'main'
           }, {
             classSize: 'big',
             text: 'Lorem ipsum dolor sit amet.',
-            bgImg: 'url("/static/img/main-hero.png")',
+            bgImg: 'url("/static/img/asset-main-1.jpg")',
             link: 'main'
           }
         ],

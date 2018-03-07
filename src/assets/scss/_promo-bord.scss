@@ -2,8 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   .promo-board {
+    position: relative;
     height: 555px;
-    background: url("/static/img/main-hero.png") center center;
+    background: #060E1B center center;
     background-size: cover;
     color: $white-color;
     text-align: justify;

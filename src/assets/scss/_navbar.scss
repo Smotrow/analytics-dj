@@ -1,7 +1,9 @@
 .top-nav-bar {
   position: fixed;
+  z-index: 100;
   width: 100%;
   background-color: $white-bg;
+  box-shadow: 4px -2px 22px -4px $black-color;
 
   .container-fluid {
     border-bottom: $border-light;
@@ -30,7 +32,7 @@
 
     .nav {
       .general-link {
-        margin: 8px;
+        margin: 8px 8px 8px 60px;
       }
 
       > li > a {
