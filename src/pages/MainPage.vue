@@ -12,7 +12,6 @@
             a.link.text-black  Lorem ipsum dolor
     main
       promo-boards(:boards="promoBoards")
-      p( v-for="n in 11") {{ n }} stories
 </template>
 
 <script>
