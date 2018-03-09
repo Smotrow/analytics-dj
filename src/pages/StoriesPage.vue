@@ -33,19 +33,19 @@
           {
             id: 1,
             text: 'Як працює Analytics?',
-            bgImg: 'url("/static/img/asset-main-device.png")'
+            bgImg: 'url("/static/img/asset-story-1.jpg")'
           }, {
             id: 2,
             text: 'Історії користувачів',
-            bgImg: 'url("/static/img/asset-main-2.jpg")'
+            bgImg: 'url("/static/img/asset-story-2.jpg")'
           }, {
             id: 3,
             text: 'Про систему Analytics',
-            bgImg: 'url("/static/img/asset-main-1.jpg")'
+            bgImg: 'url("/static/img/asset-story-3.jpg")'
           }, {
             id: 4,
             text: 'Про систему Analytics',
-            bgImg: 'url("/static/img/asset-main-1.jpg")'
+            bgImg: 'url("/static/img/asset-story-4.jpg")'
           }
         ],
         textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +

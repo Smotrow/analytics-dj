@@ -10,11 +10,11 @@
       .collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
           li
-            router-link(to="stories") Історії
+            router-link(:to="{ name: 'Stories'}") Історії
           li
-            router-link(to="about-system") Про систему
+            router-link(:to="{ name: 'AboutSystem'}") Про систему
           li
-            router-link(to="how-it-works") Як працює
+            router-link(:to="{ name: 'HowItWorks'}") Як працює
           li
             router-link(to="#") Контакти
           li

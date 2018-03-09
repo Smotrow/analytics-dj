@@ -42,7 +42,7 @@
         font-weight: 600;
         color: $nav-color;
 
-        &.router-link-exact-active {
+        &.router-link-exact-active, &.router-link-active {
           border-bottom: 2px solid $primary-underline;
         }
       }

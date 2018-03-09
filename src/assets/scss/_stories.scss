@@ -45,3 +45,24 @@
   }
 }
 
+.story-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .story-header-info {
+    padding: 10px 0;
+    border-top: 2px solid $dark-light-gray;
+    border-bottom: 2px solid $dark-light-gray;
+  }
+
+  .story-main {
+
+    .text-section {
+
+      h4 {
+        margin: 50px 0 15px;
+      }
+    }
+  }
+}
+

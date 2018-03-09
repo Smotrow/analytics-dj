@@ -10,11 +10,11 @@
             h3 Про сервіс
             ul.nav-vertical
               li
-                router-link(to="stories") Історії
+                router-link(:to="{ name: 'Stories'}") Історії
               li
-                router-link(to="about-system") Про систему
+                router-link(:to="{ name: 'AboutSystem'}") Про систему
               li
-                router-link(to="how-it-works") Як працює
+                router-link(:to="{ name: 'HowItWork'}") Як працює
           .contacts.col-sm-5.col-xs-6
             h3 Контакти
             ul.nav-vertical

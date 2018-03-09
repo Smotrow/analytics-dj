@@ -27,7 +27,7 @@ export default new Router({
           name: 'Main',
           component: MainPage
         }, {
-          path: 'story',
+          path: 'stories/story/:id',
           name: 'Story',
           component: StoryPage
         }, {
