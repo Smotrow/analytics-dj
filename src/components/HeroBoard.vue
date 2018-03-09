@@ -6,7 +6,7 @@
           slot(name="header")
         .bord-content
           slot(name="content")
-      .details-line.container-global(v-if="needDetails")
+      .details-line.container-global.hidden-xs(v-if="needDetails")
         slot(name="details")
 </template>
 

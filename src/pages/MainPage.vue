@@ -1,7 +1,7 @@
 <template lang="jade">
   div
     header
-      hero-board(:needDetails="true")
+      hero-board(:needDetails="true", :bgImg="heroBg")
         div(slot="header")
           h3 Ми не даємо відповіді на запитання.
             font.text-primary  Ми відшукуємо справедливість.
@@ -29,6 +29,7 @@
     },
     data () {
       return {
+        heroBg: 'url(\'/static/img/main-hero.png\')',
         promoBoards: [
           {
             classSize: 'small',

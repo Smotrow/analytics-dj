@@ -60,6 +60,7 @@
       .details-line {
         height: 65px;
         width: 100%;
+        min-width: 300px;
         background: $gradient-left;
         align-items: center;
       }
