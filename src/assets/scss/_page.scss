@@ -1,6 +1,9 @@
 .page {
   > .content {
     padding-top: 102px;
+    @media (max-width: 988px) {
+      padding-top: 51px;
+    }
   }
 }
 
