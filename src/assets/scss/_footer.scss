@@ -22,9 +22,9 @@
       justify-content: flex-start;
     }
     @media (max-width: 768px) {
-      .footer-logo, .footer-info{
+      .footer-info{
         text-align: center;
-        padding-top: 20px;
+        padding-bottom: 20px;
       }
       .copyright{
         justify-content: center;

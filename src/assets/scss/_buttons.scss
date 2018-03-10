@@ -1,7 +1,32 @@
+@mixin btnColor($color) {
+  color: $white-color;
+  background-color: $color;
+  border: 2px solid $color;
+  &:hover {
+    background-color: $white-color;
+    color: $color;
+    border: 2px solid $color;
+  }
+  &.inverse {
+    background-color: $white-color;
+    color: $color;
+    &:hover {
+      background-color: $color;
+      color: $white-color;
+    }
+  }
+
+}
+
 .btn {
   border-radius: $border-radius-super-extreme;
+  font-weight: 600;
+
   &.btn-primary {
-    background-color: $primary-color;
+    @include btnColor($primary-color);
+  }
+  &.btn-primary-bright {
+    @include btnColor($primary-bright-color);
   }
 }
 
@@ -12,7 +37,7 @@
   background: url("/static/img/arrow.png") center center no-repeat;
   background-size: contain;
 
-  &:hover{
+  &:hover {
     background: url("/static/img/hover-arrow.png") center center no-repeat;
     background-size: contain;
   }

@@ -6,7 +6,7 @@
           router-link(to="main")
             img(src="/static/img/analytics-logo.png")
         .footer-info.col-sm-10.col-xs-12
-          .about.col-sm-7.col-xs-6
+          .about.col-sm-7.col-xs-12
             h3 Про сервіс
             ul.nav-vertical
               li
@@ -14,8 +14,8 @@
               li
                 router-link(:to="{ name: 'AboutSystem'}") Про систему
               li
-                router-link(:to="{ name: 'HowItWork'}") Як працює
-          .contacts.col-sm-5.col-xs-6
+                router-link(:to="{ name: 'HowItWorks'}") Як працює
+          .contacts.col-sm-5.col-xs-12
             h3 Контакти
             ul.nav-vertical
               li

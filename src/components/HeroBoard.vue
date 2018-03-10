@@ -6,6 +6,8 @@
           slot(name="header")
         .bord-content
           slot(name="content")
+        .bord-footer
+          slot(name="footer")
       .details-line.container-global.hidden-xs(v-if="needDetails")
         slot(name="details")
 </template>

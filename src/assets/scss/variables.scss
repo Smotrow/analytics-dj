@@ -47,6 +47,7 @@ $default-bg:                 #3281ba !default;
 $default-states-color:       darken($default-color,11%) !default;
 
 $primary-color:              #0F76BB !default; //#447df7
+$primary-bright-color:       #467CFF !default; //#447df7
 $primary-dark-color:         #143779 !default; //#447df7
 $primary-bg:                 #7A9E9F !default; //#447df7
 $primary-states-color:       darken($primary-color,11%) !default;
@@ -159,6 +160,7 @@ $margin-base-vertical:         15px !default;
 // Cristina: am schimbat aici si s-au modificat inputurile;
 
 $margin-bottom:                0 0 10px 0 !default;
+$border-thick:               2px !default;
 $border-radius-small:           3px !default;
 $border-radius-base:            4px !default;
 $border-radius-large:           6px !default;
