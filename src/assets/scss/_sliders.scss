@@ -1,0 +1,94 @@
+.slider-full {
+  height: 620px;
+  position: relative;
+  color: $white-color;
+  .slide-arrow {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height: 100%;
+    width: 75px;
+    cursor: pointer;
+    &.arrow-previous {
+      left: 0;
+      background: linear-gradient(to right,
+        rgba(246, 251, 244, 0.30),
+        rgba(197, 221, 232, 0));
+
+    }
+    &.arrow-next {
+      right: 0;
+      background: linear-gradient(to left,
+        rgba(246, 251, 244, 0.30),
+        rgba(197, 221, 232, 0));
+    }
+    .arrow {
+      background-color: transparent;
+      font-size: 4rem;
+      border: none;
+      color: rgba(246, 251, 244, 0.80);
+      border-radius: 50%;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+  &:hover {
+    .slide-arrow {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
+  .slider-container {
+    padding: 40px 30px;
+    height: 100%;
+    background: $black-color center left no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .slider-header {
+      width: 100%;
+      text-align: left;
+    }
+    .slider-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45%;
+      min-width: 300px;
+      text-align: justify;
+      .content-title {
+        padding: 70px 0 55px;
+      }
+    }
+    .slider-navigation{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      .navigation-btn{
+        color: $white-color;
+        font-size: 2rem;
+        margin: 5px 20px;
+        cursor: pointer;
+        font-weight: 400;
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid #50FFD2;
+        }
+        &.active-slide {
+          border-bottom: 1px solid #50FFD2;
+        }
+      }
+    }
+  }
+}

@@ -46,6 +46,7 @@
 
       .bord-info {
         width: 100%;
+        min-width: 290px;
       }
     }
 
@@ -117,6 +118,34 @@
             margin-top: 10px;
             line-height: 1;
           }
+        }
+      }
+    }
+  }
+}
+.about-system-hero {
+  $about-system-hero-bg-color: #143675;
+  background: center right no-repeat;
+  background-size: cover;
+  .substrate {
+    .bord-info {
+      width: 45%;
+      .bord-header {
+      }
+      .bord-content {
+        padding-right: 140px;
+      }
+    }
+  }
+
+  @media (max-width: 988px) {
+    .substrate {
+      background: $about-system-hero-bg-color;
+      .bord-info {
+        width: 100%;
+        justify-content: center;
+        .bord-content {
+          padding-right: 0;
         }
       }
     }
