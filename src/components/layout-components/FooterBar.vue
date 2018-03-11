@@ -3,19 +3,15 @@
     .container-global
       .footer-nav-bar
         .footer-logo.col-sm-2.col-xs-12
-          router-link(to="main")
+          router-link( :to="{ name: 'Main' }")
             img(src="/static/img/analytics-logo.png")
         .footer-info.col-sm-10.col-xs-12
           .about.col-sm-7.col-xs-12
             h3 Про сервіс
             ul.nav-vertical
-              li
-                router-link(:to="{ name: 'Stories'}") Історії
-              li
-                router-link(:to="{ name: 'AboutSystem'}") Про систему
-              li
-                router-link(:to="{ name: 'HowItWorks'}") Як працює
-          .contacts.col-sm-5.col-xs-12
+              li(v-for="item in menuItems", @click="ScrollTop")
+                router-link(:to="{ name: item.name}") {{item.title}}
+          #contacts.contacts.col-sm-5.col-xs-12
             h3 Контакти
             ul.nav-vertical
               li
@@ -27,8 +23,16 @@
 </template>
 
 <script>
+  import MenuItems from '../../mixins/menu-items'
+
   export default {
-    name: 'footer-bar'
+    name: 'footer-bar',
+    mixins: [MenuItems],
+    methods: {
+      ScrollTop () {
+        window.scrollTo(0, 0)
+      }
+    }
   }
 </script>
 
