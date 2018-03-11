@@ -3,7 +3,7 @@
     header
       hero-board(:bgImg="heroBg")
         div(slot="header")
-          h3 Ми не даємо відповіді на запитання.
+          h3.weight-3 Ми не даємо відповіді на запитання.
             font.text-primary  Ми відшукуємо справедливість.
         div(slot="content")
           p.none Перший в
@@ -12,7 +12,7 @@
     main
       section.info-section.container-global
         .row
-          .col-xs-12.col-sm-9.col-md-7
+          .col-xs-12.col-sm-9.col-md-6
             p.none.weight-6 {{textMore}}
       demo-stories(:stories="demoStories")
 </template>

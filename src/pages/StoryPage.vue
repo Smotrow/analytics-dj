@@ -3,9 +3,9 @@
     header
       hero-board(:bgImg="story.bgImg")
         div(slot="header")
-          h3 {{story.hero.title}}
+          h3.weight-3 {{story.hero.title}}
         div(slot="content")
-          p.none {{story.hero.content}}
+          p.none.weight-3 {{story.hero.content}}
     main
       section.story-section.container-global
         .row

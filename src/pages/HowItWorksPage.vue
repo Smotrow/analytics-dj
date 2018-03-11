@@ -3,8 +3,7 @@
     header
       hero-board.how-it-works-hero(:bgImg="heroBg", :needSubstrate="false")
         div(slot="header")
-          h2 Ми не даємо відповіді на запитання.
-            font.text-primary  Ми відшукуємо справедливість.
+          h3.weight-3 Ми не даємо відповіді на запитання.
         div(slot="content")
           p.none Перший в
             font.text-primary  Україні

@@ -3,7 +3,7 @@
     header
       hero-board(:needDetails="true", :bgImg="heroBg")
         div(slot="header")
-          h3 Ми не даємо відповіді на запитання.
+          h3.weight-3 Ми не даємо відповіді на запитання.
             font.text-primary  Ми відшукуємо справедливість.
         div(slot="content")
           p.none Перший в
