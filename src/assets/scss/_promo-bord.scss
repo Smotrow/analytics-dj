@@ -36,11 +36,24 @@
         width: 100%;
         background: $gradient-left;
         align-items: center;
+        &.container-global {
+          padding: 20px 50px;
+        }
+        @media (max-width: 500px) {
+          position: relative;
+          z-index: 11;
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+          &.container-global {
+            padding: 20px 15px;
+          }
+        }
         &:hover {
           height: 100%;
           width: 100%;
           padding: 20px 50px;
-          transition: width 0.5s, padding 1s, height 0.5s ease 0.5s;
+          transition: all ease 0.9s;
           position: relative;
           z-index: 11;
           @media (max-width: 768px) {
@@ -71,7 +84,7 @@
         &.container-global {
           padding: 15px 25px;
           @media (max-width: 768px) {
-            padding: 0 15px;
+            padding: 20px 15px;
             min-width: 290px;
           }
         }
@@ -84,13 +97,14 @@
           z-index: 11;
           @media (max-width: 768px) {
             width: 100%;
+            transition: all ease 0.9s;
             &.container-global {
               padding: 20px 15px;
             }
           }
           .details-content {
             height: 100%;
-            transition: height 1s;
+            transition: height 0.9s;
           }
         }
       }

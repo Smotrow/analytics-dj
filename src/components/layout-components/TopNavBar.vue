@@ -21,11 +21,8 @@
       .container-fluid
         .navbar-header
           router-link.sub-logo.navbar-brand( :to="{name: 'Main'}") Analytics
-          a.toggle-menu.pull-right(@click="toggleMenu")
-            i(v-show="!showMenu")
-              i.fas.fa-bars
-            i(v-show="showMenu")
-              i.fas.fa-times
+          .burger-menu.pull-right(@click="toggleMenu", :class="{'menu-on': showMenu}")
+            .burger
         .collapse-menu( v-if="showMenu")
           ul.nav
             li(v-for="item in menuItems", @click="ScrollTop")
@@ -39,6 +36,7 @@
 
 <script>
   import MenuItems from '../../mixins/menu-items'
+
   export default {
     name: 'top-nav-bar',
     mixins: [MenuItems],

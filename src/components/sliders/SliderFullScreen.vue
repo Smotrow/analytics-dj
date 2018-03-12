@@ -53,7 +53,7 @@
         this.showSlide(this.slides[nextIndex - 1].id)
       },
       previousSlide () {
-        let previousIndex = this.slide.id === 0 ? (this.slides.length) : (this.slide.id - 1)
+        let previousIndex = this.slide.id === 1 ? (this.slides.length) : (this.slide.id - 1)
         this.showSlide(this.slides[previousIndex - 1].id)
       }
     }

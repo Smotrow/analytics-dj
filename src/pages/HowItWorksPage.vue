@@ -9,8 +9,8 @@
             font.text-primary  Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
         div(slot="footer")
-          button.btn.btn-primary-bright Start
-          button.btn.btn-primary-bright.inverse Home
+          a.btn.btn-primary-bright Розпочати
+          router-link.btn.btn-primary-bright.inverse( :to="{name: 'Main'}") На головну
     main
       section#how-it-work-section.container-global
         .header

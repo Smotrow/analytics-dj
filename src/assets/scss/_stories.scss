@@ -4,10 +4,10 @@
   .demo-story {
     height: 690px;
     width: 100%;
-    //border-bottom: 1px solid $dark-gray;
-    &:nth-child(2n+1) {
-      border-right: none;
-    }
+    border-bottom: 1px solid $footer-color;
+    border-right: none;
+    border-left: none;
+    
     .story-img {
       background: url("/static/img/substrate.png") center center;
       background-size: cover;
@@ -33,20 +33,14 @@
     }
     @media (min-width: 768px) {
       width: 50%;
-      .story-img {
-      }
       .story-content {
         padding: 10px 20px;
       }
       &:nth-child(2n+1) {
-        .story-img {
-          border-right: 1px solid #dfe0e2;
-        }
+        border-right: 1px solid $footer-color;
       }
       &:nth-child(2n) {
-        .story-img {
-          border-left: 1px solid #dfe0e2;
-        }
+        border-left: 1px solid $footer-color;
       }
     }
   }

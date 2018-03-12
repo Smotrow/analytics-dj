@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'vue2-animate/dist/vue2-animate.min.css'
 import 'bootstrap3/dist/css/bootstrap.min.css'
 import './assets/scss/common.scss'
 import './assets/scss/variables.scss'

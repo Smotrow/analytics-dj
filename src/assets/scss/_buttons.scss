@@ -40,5 +40,6 @@
   &:hover {
     background: url("/static/img/hover-arrow.png") center center no-repeat;
     background-size: contain;
+    transition: all ease 0.5s;
   }
 }

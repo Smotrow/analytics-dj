@@ -41,7 +41,7 @@
         .general-link {
           margin: 7px 8px 7px 60px;
           font-weight: 600;
-          @media (max-width: 988px){
+          @media (max-width: 988px) {
             margin: 7px;
           }
         }
@@ -89,13 +89,58 @@
         }
       }
 
-      .toggle-menu {
-        font-size: 2.5rem;
-        padding: 8px 12px;
+      .burger-menu {
+        position: relative;
+        width: 50px;
+        height: 50px;
         cursor: pointer;
-        color: $dark-color;
-        &:hover {
-          background-color: #eee;
+        .burger {
+          position: absolute;
+          background: $dark-color;
+          width: 60%;
+          height: 6px;
+          top: 50%;
+          right: 15px;
+          margin-top: -5px;
+          opacity: 1;
+          &::before {
+            position: absolute;
+            background: $dark-color;
+            width: 100%;
+            height: 6px;
+            top: 10px;
+            content: "";
+            display: block;
+          }
+          &::after {
+            position: absolute;
+            background: $dark-color;
+            width: 100%;
+            height: 6px;
+            bottom: 10px;
+            content: "";
+            display: block;
+          }
+          &::after, &::before, & {
+            transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+          }
+        }
+        &.menu-on {
+          .burger::after {
+
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            bottom: 0px;
+          }
+          .burger::before {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            top: 0px;
+          }
+          .burger {
+            background: rgba(111, 111, 111, .0);
+          }
         }
       }
 

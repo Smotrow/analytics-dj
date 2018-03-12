@@ -15,11 +15,11 @@
             h3 Контакти
             ul.nav-vertical
               li
-                a тел:057-777-0866
+                a тел: 057-777-0866
               li
                 a office@domjurista.ua
       .copyright
-        p.none Дом Юриста, 2017, All rights reserved
+        p.none Дом Юриста, 2018, All rights reserved
 </template>
 
 <script>
