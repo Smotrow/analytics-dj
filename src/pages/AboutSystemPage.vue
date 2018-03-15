@@ -8,17 +8,21 @@
           p.none Перший в Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
     main
-      section.slider-full-screen
+      section#slider-full-screen
         slider-full-screen(:slides="fullSlides", :title="'About Analytics'")
+      section#slider-small
+        slider-small(:slides="fullSlides", :title="'Для кого?'")
 </template>
 
 <script>
   import HeroBoard from '../components/HeroBoard.vue'
   import SliderFullScreen from '../components/sliders/SliderFullScreen.vue'
+  import SliderSmall from '../components/sliders/SliderSmall.vue'
 
   export default {
     components: {
       [HeroBoard.name]: HeroBoard,
+      [SliderSmall.name]: SliderSmall,
       [SliderFullScreen.name]: SliderFullScreen
     },
     data () {
@@ -29,17 +33,17 @@
             id: 1,
             title: 'Test1',
             text: 'Як працює Analytics?',
-            bgImg: 'url("/static/img/asset-story-1.jpg")'
+            bgImg: '/static/img/asset-story-1.jpg'
           }, {
             id: 2,
             title: 'Test2',
             text: 'Історії користувачів',
-            bgImg: 'url("/static/img/asset-story-2.jpg")'
+            bgImg: '/static/img/asset-story-2.jpg'
           }, {
             id: 3,
             title: 'Test3',
             text: 'Про систему Analytics',
-            bgImg: 'url("/static/img/asset-story-3.jpg")'
+            bgImg: '/static/img/asset-story-3.jpg'
           }
         ],
         textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +

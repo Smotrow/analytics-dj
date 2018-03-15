@@ -18,12 +18,12 @@
               span
                 router-link.general-link.btn.btn-primary.btn-group-xs(to="#") Розпочати безкоштовно
     .mobile-menu
-      .container-fluid
+      .container-fluid(:class="{active: showMenu}")
         .navbar-header
           router-link.sub-logo.navbar-brand( :to="{name: 'Main'}") Analytics
           .burger-menu.pull-right(@click="toggleMenu", :class="{'menu-on': showMenu}")
             .burger
-        .collapse-menu( v-if="showMenu")
+        .collapse-menu
           ul.nav
             li(v-for="item in menuItems", @click="ScrollTop")
               router-link(:to="{ name: item.name}") {{item.title}}

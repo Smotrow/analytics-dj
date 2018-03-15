@@ -68,6 +68,8 @@
     display: none;
     .container-fluid {
       border-bottom: $border-light;
+      height: 51px;
+      //transition: all 0.3s linear;
 
       .navbar-brand {
         margin-bottom: -1px;
@@ -143,21 +145,36 @@
           }
         }
       }
-
-      .nav {
-        .general-link {
-          margin: 7px;
-          font-weight: 600;
-        }
-        text-align: center;
-        > li > a {
-          margin-top: -1px;
-          font-weight: 300;
-          color: $nav-color;
-
-          &.router-link-exact-active, &.router-link-active {
-            color: $primary-color;
+      .collapse-menu {
+        transform: rotateX(359deg);
+        visibility: hidden;
+        opacity: 0;
+        .nav {
+          .general-link {
+            margin: 7px;
+            font-weight: 600;
           }
+          text-align: center;
+          > li > a {
+            margin-top: -1px;
+            font-weight: 300;
+            color: $nav-color;
+
+            &.router-link-exact-active, &.router-link-active {
+              color: $primary-color;
+            }
+          }
+        }
+        //transition: all 0.4s linear 0.45s;
+      }
+
+      &.active {
+        height: 258px;
+        transition: all 0.4s linear;
+        .collapse-menu {
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.4s linear 0.4s;
         }
       }
     }
