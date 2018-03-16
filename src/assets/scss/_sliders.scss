@@ -254,3 +254,219 @@
     }
   }
 }
+
+// info-boxes
+/*.info-section
+    .info-header
+      h3.weight-3 {{title}}:
+    .boxes-container
+      .small-info-box(v-for="box in slides")
+        .title-block
+          h3.weight-3 {{box.title}}
+        .button-block
+          a.showBox(@click="openSlide(box.id)")
+      .big-info-box(v-if="showBox")
+        .close-block
+          a.close-btn(@click="closeSlide")
+        .navigation-block
+          a.previos(@click="previousSlide")
+          a.next(@click="nextSlide")
+        transition-group(:name="animationName" mode="in-out")
+          .boxs-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId")
+            .box-header
+              h4.weight-3 {{slide.title}}
+            .box-content
+              .text-block
+                p {{slide.text}}
+              .img-block
+                img(:src="slide.bgImg")*/
+.info-section {
+  padding: 70px 10px 45px;
+  background-color: #E0E0E0;
+  display: flex;
+  justify-content: space-between;
+  .info-header {
+    min-width: 290px;
+    text-align: center;
+  }
+  .boxes-container {
+    max-width: 900px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    .small-info-box {
+      background: $white-color;
+      color: #3b5998;
+      width: 300px;
+      height: 300px;
+      padding: 0 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 0.5px solid #9B98A1;
+      &:hover {
+        color: $white-color;
+        background: $gradient-top;
+        .button-block {
+          .show-button{
+            color: $white-color;
+            border: 2px solid $white-color;
+            a {
+              color: $white-color;
+            }
+          }
+        }
+        //transition: all 1s linear;
+      }
+
+      .button-block {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        color: $primary-bright-color;
+        .show-button {
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            line-height: 30px;
+            font-weight: 300;
+            font-size: 36px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          border-radius: 50%;
+          border: 2px solid $primary-bright-color;
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-top: none;
+      }
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        border-bottom: none;
+      }
+      &:nth-child(3n), &:nth-last-child(1) {
+        border-right: none;
+      }
+      &:nth-last-child(3n), &:nth-child(1) {
+        border-left: none;
+      }
+    }
+    .big-info-box {
+      padding: 20px 30px;
+      background-color: $white-color;
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      .close-block {
+        margin-right: 15px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        display: flex;
+        align-items: flex-start;
+        color: $primary-bright-color;
+        .close-button {
+          transform: rotate(45deg);
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            line-height: 1;
+            font-weight: 300;
+            font-size: 36px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          border-radius: 50%;
+          border: 2px solid $primary-bright-color;
+        }
+      }
+      .navigation-block {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        display: flex;
+        align-items: flex-start;
+        color: $primary-bright-color;
+        a {
+          background: url("/static/img/arrow-blue.jpg") center center no-repeat;
+          background-size: contain;
+          display: block;
+          cursor: pointer;
+          width: 32px;
+          height: 24px;
+          margin: 15px 7.5px;
+          &.previous {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .box-container {
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .box-header {
+          padding-right: 20px;
+          width: 100%;
+          min-width: 290px;
+          max-width: 375px;
+        }
+        .box-content {
+          width: 100%;
+          max-width: 400px;
+          display: flex;
+          flex-direction: column;
+          .img-block {
+            padding-top: 28px;
+            margin-top: 20px;
+            border-top: 1px solid #D4CACB;
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*h3.weight-3 {{title}}:
+                     .boxes-container
+                     .small-info-box(v-for="box in slides")
+.title-block
+h3.weight-3 {{box.title}}
+.button-block
+a.showBox(@click="openSlide(box.id)")
+.big-info-box(v-if="showBox")
+.close-block
+a.close-btn(@click="closeSlide")
+.navigation-block
+a.previos(@click="previousSlide")
+a.next(@click="nextSlide")
+transition-group(:name="animationName" mode="in-out")
+.boxs-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId")
+.box-header
+h4.weight-3 {{slide.title}}
+.box-content
+.text-block
+p {{slide.text}}
+.img-block
+img(:src="slide.bgImg")*/

@@ -35,7 +35,7 @@
             classSize: 'small',
             text: 'Як працює Analytics?',
             mainImg: 'url("/static/img/asset-main-device.png")',
-            link: 'main'
+            link: 'how-it-works'
           }, {
             classSize: 'small',
             text: 'Історії користувачів',

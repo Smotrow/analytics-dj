@@ -8,9 +8,11 @@
           p.none Перший в Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
     main
-      section#slider-full-screen
+      section#allows-section
+        info-boxes(:slides="fullSlides", :title="'Analytics Allows'")
+      section#why-section
         slider-full-screen(:slides="fullSlides", :title="'About Analytics'")
-      section#slider-small
+      section#for-who-section
         slider-small(:slides="fullSlides", :title="'Для кого?'")
 </template>
 
@@ -18,11 +20,13 @@
   import HeroBoard from '../components/HeroBoard.vue'
   import SliderFullScreen from '../components/sliders/SliderFullScreen.vue'
   import SliderSmall from '../components/sliders/SliderSmall.vue'
+  import InfoBoxes from '../components/InfoBoxes.vue'
 
   export default {
     components: {
       [HeroBoard.name]: HeroBoard,
       [SliderSmall.name]: SliderSmall,
+      [InfoBoxes.name]: InfoBoxes,
       [SliderFullScreen.name]: SliderFullScreen
     },
     data () {
@@ -41,6 +45,21 @@
             bgImg: '/static/img/asset-story-2.jpg'
           }, {
             id: 3,
+            title: 'Test3',
+            text: 'Про систему Analytics',
+            bgImg: '/static/img/asset-story-3.jpg'
+          }, {
+            id: 4,
+            title: 'Test3',
+            text: 'Про систему Analytics',
+            bgImg: '/static/img/asset-story-3.jpg'
+          }, {
+            id: 5,
+            title: 'Test3',
+            text: 'Про систему Analytics',
+            bgImg: '/static/img/asset-story-3.jpg'
+          }, {
+            id: 6,
             title: 'Test3',
             text: 'Про систему Analytics',
             bgImg: '/static/img/asset-story-3.jpg'
