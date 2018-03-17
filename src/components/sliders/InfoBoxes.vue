@@ -9,7 +9,7 @@
         .button-block
           .show-button(@click="openSlide(box.id)")
             a +
-      transition(name="fade")
+      transition(name="slideUp")
         .big-info-box(v-if="showBox")
           .close-block
             .close-button(@click="closeSlide")
