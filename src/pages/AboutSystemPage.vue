@@ -9,7 +9,7 @@
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
     main
       section#allows-section
-        info-boxes(:slides="allowsSlides", :title="'Analytics дозволяє:'")
+        info-boxes(:slides="allowsSlides", :title="'Analytics дозволяє'")
       section#why-section
         slider-full-screen(:slides="whySlides", :title="'Чому Analytics'")
       section#for-who-section
