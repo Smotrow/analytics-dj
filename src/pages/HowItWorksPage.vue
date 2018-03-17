@@ -12,13 +12,15 @@
     main
       section#how-it-work-section.container-global
         .header
-          p.weigth-6.title Як працює система
+          p.weight-6.title Як працює система
         .content
           .step( v-for="(step,index) in steps")
             .step-head
               .step-line
-              .step-icon {{index+1}}
-            .step-main {{step.text}}
+              .step-icon
+                p.none.weight-6 {{index+1}}
+            .step-main
+              p.none {{step.text}}
       section#about-section.container-global
         .text-block
           p.none {{aboutText}}

@@ -12,7 +12,7 @@
         div(slot="details")
           p.none.weight-3
             font.weight-5 Останні новини
-            | | Analytics передбачив рішення судового споруб яке поставило під питання...
+            | | Analytics передбачив рішення судового спору, яке поставило під питання...
             a.link.text-black.weight-5  Читати далі
     main
       promo-boards(:boards="promoBoards")

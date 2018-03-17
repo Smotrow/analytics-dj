@@ -34,7 +34,7 @@ export default {
           bgImg: '/static/img/asset-story-3.jpg'
         }
       ],
-      fowWhoSlides: [
+      forWhoSlides: [
         {
           id: 1,
           title: 'Test1',
