@@ -59,7 +59,7 @@
   .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
     opacity: 0;
   }
-  .bounce-enter-active {
+  /*.bounce-enter-active {
     animation: bounce-in .5s;
   }
   .bounce-leave-active {
@@ -74,5 +74,5 @@
       opacity: 1;
       transform: scale(1);
     }
-  }
+  }*/
 </style>
