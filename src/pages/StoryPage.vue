@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import HeroBoard from '../components/HeroBoard.vue'
+  import HeroBoard from '../components/boards/HeroBoard.vue'
   import StoriesData from '../mixins/stories-data'
   import _ from 'lodash'
 

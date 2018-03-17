@@ -1,25 +1,24 @@
 <template lang="jade">
   div
     header
-      hero-board(:bgImg="heroBg")
+      hero-board(:bgImg="hero.bg")
         div(slot="header")
-          h3.weight-3 Ми не даємо відповіді на запитання.
-            font.text-primary  Ми відшукуємо справедливість.
+          h3.weight-3 Як Analytics змінює є,
+            font.text-primary  де ми знаходимось
         div(slot="content")
-          p.none Перший в
-            font.text-primary  Україні
-            |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
+          p.none {{hero.text}}
     main
-      section.info-section.container-global
-        .row
-          .col-xs-12.col-sm-9.col-md-6
-            p.none.weight-6 {{textMore}}
+      section.info-section
+        .container-global
+          .row
+            .col-xs-12.col-sm-9.col-md-6
+              p.none.weight-6 {{textInfo}}
       demo-stories(:stories="demoStories")
 </template>
 
 <script>
-  import HeroBoard from '../components/HeroBoard.vue'
-  import DemoStories from '../components/DemoStories.vue'
+  import HeroBoard from '../components/boards/HeroBoard.vue'
+  import DemoStories from '../components/stories/DemoStories.vue'
 
   export default {
     components: {
@@ -28,7 +27,11 @@
     },
     data () {
       return {
-        heroBg: 'url("/static/img/stories-hero.jpg")',
+        hero: {
+          title: 'Як Analytics змінює є, де ми знаходимось',
+          text: 'Історії людей та компаній, які  випробували прогнозування системи.',
+          bg: 'url("/static/img/stories-hero.jpg")'
+        },
         demoStories: [
           {
             id: 1,
@@ -48,13 +51,9 @@
             bgImg: 'url("/static/img/asset-story-4.jpg")'
           }
         ],
-        textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.',
-        textLess: 'Lorem ipsum dolor sit amet. '
+        textInfo: 'Наша місія - створити доступне правосуддя для кожної' +
+        ' людини в Україні. І тільки реальні  історії доводять, що ми ' +
+        'робимо це не дарма.'
       }
     }
   }

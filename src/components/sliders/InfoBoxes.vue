@@ -1,5 +1,5 @@
 <template lang="jade">
-  .info-section
+  .info-boxes-section
     .info-header
       h3.weight-3 {{title}}:
     .boxes-container
@@ -9,7 +9,7 @@
         .button-block
           .show-button(@click="openSlide(box.id)")
             a +
-      transition(name="bounce")
+      transition(name="slideUp")
         .big-info-box(v-if="showBox")
           .close-block
             .close-button(@click="closeSlide")
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import Sliders from '../mixins/sliders'
+  import Sliders from '../../mixins/sliders'
 
   export default {
     name: 'info-boxes',

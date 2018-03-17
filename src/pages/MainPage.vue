@@ -19,8 +19,8 @@
 </template>
 
 <script>
-  import HeroBoard from '../components/HeroBoard.vue'
-  import PromoBoards from '../components/PromoBoards.vue'
+  import HeroBoard from '../components/boards/HeroBoard.vue'
+  import PromoBoards from '../components/boards/PromoBoards.vue'
 
   export default {
     components: {

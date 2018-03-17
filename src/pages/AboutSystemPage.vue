@@ -9,18 +9,18 @@
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
     main
       section#allows-section
-        info-boxes(:slides="fullSlides", :title="'Analytics Allows'")
+        info-boxes(:slides="allowsSlides", :title="'Analytics дозволяє:'")
       section#why-section
-        slider-full-screen(:slides="fullSlides", :title="'About Analytics'")
+        slider-full-screen(:slides="whySlides", :title="'Чому Analytics'")
       section#for-who-section
-        slider-small(:slides="fullSlides", :title="'Для кого?'")
+        slider-small(:slides="forWhoSlides", :title="'Для кого?'")
 </template>
 
 <script>
-  import HeroBoard from '../components/HeroBoard.vue'
+  import HeroBoard from '../components/boards/HeroBoard.vue'
   import SliderFullScreen from '../components/sliders/SliderFullScreen.vue'
   import SliderSmall from '../components/sliders/SliderSmall.vue'
-  import InfoBoxes from '../components/InfoBoxes.vue'
+  import InfoBoxes from '../components/sliders/InfoBoxes.vue'
   import SlidersData from '../mixins/sliders-data'
 
   export default {

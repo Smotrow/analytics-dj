@@ -12,14 +12,17 @@
       @click.prevent="showSlide(nav.id)",
       :class="nav.id === slide.id ? 'active-slide' : ''") {{nav.title}}
     transition-group(:name="animationName" mode="in-out")
-      .slider-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId", :style="slideBg(slide.bgImg)")
+      .slider-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId")
         .slider-header
           p.none {{title}}
         .slider-content.container-global
-          .content-title
-            p.none.weight-6 {{slide.title}}
-          .content-text
-            p.none {{slide.text}}
+          .img-block
+            img(:src="slide.bgImg")
+          .text-block
+            .content-title
+              p.none.weight-6 {{slide.title}}
+            .content-text
+              p.none {{slide.text}}
 </template>
 
 <script>
