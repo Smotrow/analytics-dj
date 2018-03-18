@@ -9,11 +9,13 @@
           p.none Перший в
             font.text-primary  Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
-        div(slot="details")
-          p.none.weight-3
-            font.weight-5 Останні новини
-            | | Analytics передбачив рішення судового спору, яке поставило під питання...
-            a.link.text-black.weight-5  Читати далі
+        div(slot="details").run-line
+          .title
+            p.none.weight-5 Останні новини |
+          .content
+            p.none.weight-3 Analytics передбачив рішення судового спору, яке поставило під питання...
+          .link-block
+            p.none.link.text-black.weight-5  Читати далі
     main
       promo-boards(:boards="promoBoards")
 </template>
@@ -60,6 +62,53 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  .run-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .title {
+      position: absolute;
+      left: 0;
+    }
+    .content {
+      width:100%;
+      white-space:nowrap;
+      overflow:hidden;
+      display: inline-block;
+      margin: 0 100px 0 145px;
+      p {
+        display:inline-block;
+        padding-left:100%;
+        -webkit-animation: marquee 10s infinite linear;
+        animation: marquee 10s infinite linear;
+      }
+    }
+    .link-block {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .marquee{
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+  }
 
+  .marquee span {
+    display:inline-block;
+    padding-left:100%;
+    -webkit-animation: marquee 10s infinite linear;
+    animation: marquee 10s infinite linear;
+  }
+
+  @-webkit-keyframes marquee {
+    0%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(-100%, 0);}
+  }
+  @keyframes marquee{
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-100%, 0)}
+  }
 </style>

@@ -9,7 +9,7 @@
           .about.col-sm-7.col-xs-12
             h3 Про сервіс
             ul.nav-vertical
-              li(v-for="item in menuItems", @click="ScrollTop")
+              li(v-for="item in menuItems", @click="toggleMenu")
                 router-link(:to="{ name: item.name}") {{item.title}}
           #contacts.contacts.col-sm-5.col-xs-12
             h3 Контакти
@@ -27,12 +27,7 @@
 
   export default {
     name: 'footer-bar',
-    mixins: [MenuItems],
-    methods: {
-      ScrollTop () {
-        window.scrollTo(0, 0)
-      }
-    }
+    mixins: [MenuItems]
   }
 </script>
 

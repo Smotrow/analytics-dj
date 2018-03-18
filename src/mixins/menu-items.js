@@ -12,10 +12,6 @@ export default {
   methods: {
     toggleMenu () {
       this.showMenu = !this.showMenu
-    },
-    ScrollTop () {
-      window.scrollTo(0, 0)
-      this.showMenu = false
     }
   }
 }

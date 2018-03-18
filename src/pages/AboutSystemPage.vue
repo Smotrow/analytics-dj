@@ -3,7 +3,7 @@
     header
       hero-board.about-system-hero(:bgImg="heroBg", :needSubstrate="false")
         div(slot="header")
-          h3.weight-3 Ми не даємо відповіді на запитання.
+          h3.weight-3 Ми не даємо відповіді на запитання. Ми відшукуємо справедливість.
         div(slot="content")
           p.none Перший в Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.

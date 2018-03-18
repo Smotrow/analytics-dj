@@ -10,9 +10,9 @@
           router-link.sub-logo.navbar-brand( :to="{ name: 'Main' }") Analytics
         .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li(v-for="item in menuItems", @click="ScrollTop")
+            li(v-for="item in menuItems", @click="toggleMenu")
               router-link(:to="{ name: item.name}") {{item.title}}
-            li
+            li(@click="toggleMenu")
               a(href="#contacts") Контакти
             li
               span
@@ -25,9 +25,9 @@
             .burger
         .collapse-menu
           ul.nav
-            li(v-for="item in menuItems", @click="ScrollTop")
+            li(v-for="item in menuItems", @click="toggleMenu")
               router-link(:to="{ name: item.name}") {{item.title}}
-            li
+            li(@click="toggleMenu")
               a(href="#contacts") Контакти
             li
               span
