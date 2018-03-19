@@ -29,7 +29,7 @@
         margin: 1px 18px 0;
         font-weight: 700;
         &:hover {
-          background-color: #eee;
+          background-color: $nav-item-hover;
           border-bottom: 2px solid $nav-color;
         }
         &.router-link-exact-active {
@@ -55,7 +55,7 @@
             border-bottom: 2px solid $primary-underline;
           }
           &:hover {
-            background-color: #eee;
+            background-color: $nav-item-hover;
             color: $dark-color;
             border-bottom: 2px solid $nav-color;
           }
@@ -84,7 +84,7 @@
         padding-right: 10px;
         font-weight: 700;
         &:hover {
-          background-color: #eee;
+          background-color: $nav-item-hover;
         }
         &.router-link-exact-active {
           border-bottom: 2px solid $primary-underline;
@@ -180,7 +180,163 @@
     }
   }
 
-  @media (max-width: 768px) {
+  &.dark {
+    background-color: $dark-nav;
+
+    .desktop-menu {
+
+      .container-fluid {
+        height: 51px;
+        border-bottom: none;
+
+        .navbar-brand {
+          padding: 5px 0;
+          color: $white-color;
+        }
+
+        .main-logo {
+          padding: 5px 0;
+
+          img {
+            max-height: 100%;
+            background: center center;
+          }
+        }
+
+        .nav {
+          > li > a {
+            margin-top: -1px;
+            font-weight: 300;
+            height: 51px;
+            color: $white-color;
+            &.sub-logo {
+              margin: 0;
+              font-size: 1.6rem;
+              font-weight: 600;
+            }
+
+            &.brand-link {
+              width: 50px;
+              text-align: center;
+              font-size: 2.2rem;
+            }
+
+            &.profile-logo {
+              width: 50px;
+              text-align: center;
+              height: 51px;
+              background: url('/static/img/profile-logo.png') center center no-repeat;
+              background-size: 24px 24px;
+
+              &:hover {
+                background: $nav-item-hover url('/static/img/profile-logo-dark.png') center center no-repeat;
+              }
+            }
+
+            &.router-link-exact-active, &.router-link-active {
+              border-bottom: 2px solid $primary-underline;
+            }
+
+            &:hover {
+              background-color: $nav-item-hover;
+              color: $dark-nav;
+              border-bottom: 2px solid $nav-color;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      .container-fluid {
+        height: 51px;
+        border-bottom: none;
+
+        .navbar-brand {
+          padding: 5px 0;
+          color: $white-color;
+        }
+        .main-logo {
+          padding: 5px 0;
+
+          img {
+            max-height: 100%;
+            background: center center;
+          }
+        }
+
+        .burger-menu {
+          .burger {
+            background: $white-color;
+            &::before, &::after {
+              background: $white-color;
+            }
+          }
+          &.menu-on {
+            .burger {
+              background: $dark-nav;
+            }
+          }
+        }
+        .collapse-menu {
+          visibility: hidden;
+          opacity: 0;
+          .nav > li > a {
+            width: 100%;
+            height: 42px;
+            text-align: center;
+            margin-top: -1px;
+            font-weight: 300;
+            color: $white-color;
+            &.sub-logo {
+              width: 100%;
+              margin: 0;
+              font-size: 1.6rem;
+              font-weight: 600;
+            }
+
+            &.brand-link {
+              width: 100%;
+              text-align: center;
+              font-size: 2rem;
+              line-height: 0;
+            }
+
+            &.profile-logo {
+              width: 100%;
+              text-align: center;
+              background: url('/static/img/profile-logo.png') center center no-repeat;
+              background-size: 24px 24px;
+
+              &:hover {
+                background: $nav-item-hover url('/static/img/profile-logo-dark.png') center center no-repeat;
+              }
+            }
+            &:hover {
+              background-color: $nav-item-hover;
+              color: $dark-nav;
+            }
+          }
+        }
+
+        &.active {
+          height: 261px;
+          transition: all 0.4s linear;
+          .collapse-menu {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.4s linear 0.4s;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .top-nav-bar, .top-nav-bar.dark {
     .navbar-header {
       margin-left: -5px;
     }

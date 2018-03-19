@@ -7,7 +7,7 @@
         div(slot="content")
           p.none  {{hero.text}}
         div(slot="footer")
-          a.btn.btn-primary-bright Розпочати
+          router-link.btn.btn-primary-bright(:to="{ name: 'WorkPanel' }") Розпочати
           router-link.btn.btn-primary-bright.inverse( :to="{name: 'Main'}") На головну
     main
       section#how-it-work-section.container-global

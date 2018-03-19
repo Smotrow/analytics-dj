@@ -5,6 +5,11 @@
       padding-top: 51px;
     }
   }
+  &.small-nav {
+    > .content {
+      padding-top: 51px;
+    }
+  }
 }
 
 .info-section {
@@ -133,3 +138,5 @@
     }
   }
 }
+
+//work-panel

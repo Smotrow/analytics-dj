@@ -40,3 +40,12 @@ body {
 .bg-gradient-bottom {
   background: $gradient-bottom;
 }
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+input{
+  width: 100%;
+}

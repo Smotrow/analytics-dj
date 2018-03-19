@@ -8,6 +8,7 @@ import StoriesPage from '../pages/StoriesPage.vue'
 import StoryPage from '../pages/StoryPage.vue'
 import AboutSystemPage from '../pages/AboutSystemPage.vue'
 import HowItWorksPage from '../pages/HowItWorksPage.vue'
+import WorkPanel from '../pages/WorkPanel.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,10 @@ const router = new Router({
           path: 'about-system',
           name: 'AboutSystem',
           component: AboutSystemPage
+        }, {
+          path: 'work-panel',
+          name: 'WorkPanel',
+          component: WorkPanel
         }
       ]
     }

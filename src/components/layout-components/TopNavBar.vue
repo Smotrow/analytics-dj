@@ -10,13 +10,13 @@
           router-link.sub-logo.navbar-brand( :to="{ name: 'Main' }") Analytics
         .collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li(v-for="item in menuItems", @click="toggleMenu")
+            li(v-for="item in menuItems")
               router-link(:to="{ name: item.name}") {{item.title}}
-            li(@click="toggleMenu")
+            li
               a(href="#contacts") Контакти
             li
               span
-                router-link.general-link.btn.btn-primary.btn-group-xs(to="#") Розпочати безкоштовно
+                router-link.general-link.btn.btn-primary.btn-group-xs(:to="{ name: 'WorkPanel' }") Розпочати безкоштовно
     .mobile-menu
       .container-fluid(:class="{active: showMenu}")
         .navbar-header
@@ -31,7 +31,7 @@
               a(href="#contacts") Контакти
             li
               span
-                router-link.general-link.btn.btn-primary.btn-group-xs(to="#") Розпочати безкоштовно
+                router-link.general-link.btn.btn-primary.btn-group-xs(:to="{ name: 'WorkPanel' }") Розпочати безкоштовно
 </template>
 
 <script>
