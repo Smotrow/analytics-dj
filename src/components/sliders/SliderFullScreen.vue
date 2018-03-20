@@ -11,7 +11,7 @@
       v-for="nav in slides",
       @click.prevent="showSlide(nav.id)",
       :class="nav.id === slide.id ? 'active-slide' : ''") {{nav.title}}
-    transition-group(:name="animationName" mode="in-out")
+    transition-group(:name="fade" mode="in-out")
       .slider-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId")
         .slider-header
           p.none {{title}}

@@ -45,7 +45,7 @@
                     .col-xs-4
                       label email
                   .row.relative
-                    input(type="radio").radio-input
+                    input(type="radio" v-model="test").radio-input
                     .col-xs-4
                       label email
                     .col-xs-4
@@ -53,7 +53,7 @@
                     .col-xs-4
                       label email
                   .row.relative
-                    input(type="radio").radio-input
+                    input(type="radio" v-model="test").radio-input
                     .col-xs-4
                       label email
                     .col-xs-4
@@ -64,10 +64,10 @@
               .col-md-4.col-xs-12
                 label email
               .col-md-4.col-xs-12.relative
-                input(type="radio").radio-input
+                input(type="radio" v-model="test1").radio-input
                 label email
               .col-md-4.col-xs-12.relative
-                input(type="radio").radio-input
+                input(type="radio" v-model="test1").radio-input
                 label email
 </template>
 
@@ -78,6 +78,8 @@
     components: {},
     data () {
       return {
+        test: false,
+        test1: false,
         heroBg: 'url(\'/static/img/main-hero.png\')',
         promoBoards: [
           {
@@ -126,6 +128,7 @@
   .radio-input {
     left: 0;
     top: 0;
+    z-index: 2;
     position: absolute;
     width: 10px;
     margin-left: 15px;

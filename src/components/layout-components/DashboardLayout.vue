@@ -3,8 +3,8 @@
     top-nav-bar-work-panel(v-if="isWorkPanel")
     top-nav-bar(v-else)
     main.content
-    transition( name="fade", mode="out-in")
-    router-view
+      transition( name="fade", mode="out-in")
+        router-view
     footer-bar
 </template>
 
@@ -39,7 +39,6 @@
   .fade-enter,
   .fade-leave-to
     /* .fade-leave-active in <2.1.8 */
-
   {
     opacity: 0
   }
