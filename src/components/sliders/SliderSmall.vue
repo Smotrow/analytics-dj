@@ -21,9 +21,9 @@
           .slider-img(:style="slideBg(slide.bgImg)")
           .slider-content
             .content-title
-              p.none.weight-5 {{slide.title}}
+              p.weight-5 {{slide.title}}
             .content-text
-              p.none {{slide.text}}
+              p {{slide.text}}
 </template>
 
 <script>

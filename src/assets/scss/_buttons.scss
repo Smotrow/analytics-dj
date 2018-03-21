@@ -28,6 +28,9 @@
   &.btn-primary-bright {
     @include btnColor($primary-bright-color);
   }
+  &.btn-purple {
+    @include btnColor($purple-color);
+  }
 }
 
 .arrow-link {

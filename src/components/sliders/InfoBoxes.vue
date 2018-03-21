@@ -23,7 +23,7 @@
                 h3.none.weight-3 {{slide.title}}
               .box-content
                 .text-block
-                  p.none {{slide.text}}
+                  p {{slide.text}}
                 .img-block
                   img(:src="slide.bgImg")
 </template>

@@ -6,8 +6,22 @@
   color: $dark-color;
 }
 
+.text-dark-grey {
+  color: $dark-grey-color;
+}
+
 .text-black {
   color: $black-color;
+}
+
+.text-purple {
+  color: $purple-color;
+}
+
+.text-small {
+  &, & * {
+    font-size: 1.4rem;
+  }
 }
 
 .link {
@@ -34,6 +48,7 @@
 
 p {
   font-size: 1.8rem;
+  margin: 0
 }
 
 a {

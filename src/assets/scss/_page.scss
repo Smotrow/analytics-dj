@@ -59,7 +59,7 @@
         .step-line {
           position: absolute;
           width: 1px;
-          left:50%;
+          left: 50%;
           height: 100%;
           background-color: $white-color;
         }
@@ -86,7 +86,7 @@
   }
 }
 
-#about-section{
+#about-section {
   $bg-gray-local: #E0E0E0;
   $line-color: #EBEBEB;
   background-color: $bg-gray-local;
@@ -103,12 +103,12 @@
     width: 40%;
     text-align: right;
     padding: 0 10px;
-    img{
+    img {
       max-width: 100%;
     }
   }
   @media (max-width: 988px) {
-    &{
+    & {
       padding-top: 50px;
       padding-bottom: 50px;
       .text-block {
@@ -120,7 +120,7 @@
     }
   }
   @media (max-width: 768px) {
-    &{
+    & {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
@@ -140,3 +140,7 @@
 }
 
 //work-panel
+.work-panel {
+  background-color: $work-panel-bg;
+  border-bottom: 1px solid $light-gray;
+}

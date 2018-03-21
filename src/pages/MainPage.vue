@@ -6,16 +6,16 @@
           h3.weight-3 Ми не даємо відповіді на запитання.
             font.text-primary  Ми відшукуємо справедливість.
         div(slot="content")
-          p.none Перший в
+          p Перший в
             font.text-primary  Україні
             |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
         div(slot="details").run-line
           .title
-            p.none.weight-5 Останні новини |
+            p.weight-5 Останні новини |
           .content
-            p.none.weight-3 Analytics передбачив рішення судового спору, яке поставило під питання...
+            p.weight-3 Analytics передбачив рішення судового спору, яке поставило під питання...
           .link-block
-            p.none.link.text-black.weight-5  Читати далі
+            p.link.text-black.weight-5  Читати далі
     main
       promo-boards(:boards="promoBoards")
 </template>

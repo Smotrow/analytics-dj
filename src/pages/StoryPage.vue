@@ -5,14 +5,14 @@
         div(slot="header")
           h3.weight-3 {{story.hero.title}}
         div(slot="content")
-          p.none.weight-3 {{story.hero.content}}
+          p.weight-3 {{story.hero.content}}
     main
       section.story-section.container-global
         .row
           .col-xs-12.col-sm-9.col-md-6
             .story-header-info
-              p.none Клієнт: {{story.client}}
-              p.none Project:
+              p Клієнт: {{story.client}}
+              p Project:
                 router-link(:to="{name: 'Main'}")  {{story.project}}
             .story-main
               .text-section( v-for="block in story.textBlocks")

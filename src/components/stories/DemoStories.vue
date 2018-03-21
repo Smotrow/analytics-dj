@@ -4,10 +4,10 @@
       .story-img(:style="makeBg(story.bgImg)")
       .story-content
         .story-title
-          p.none {{story.text}}
+          p {{story.text}}
         .story-link
           router-link(:to="{ name: 'Story', params: { id: story.id }}")
-            p.none Читати далі
+            p Читати далі
 </template>
 
 <script>

@@ -1,0 +1,120 @@
+.step {
+  padding: 40px 0;
+  .step-header {
+    position: relative;
+    .link-block {
+      min-height: 15px;
+      .home-link p {
+        left: -35px;
+        position: relative;
+        padding-left: 35px;
+        background: url("/static/img/arrow-blue-left.png") left center no-repeat;
+        background-size: 25px 15px;
+      }
+    }
+    .title-block {
+      .header-wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 15px 0 15px;
+        border-bottom: 3px solid $primary-bright-color;
+      }
+    }
+  }
+  .step-content {
+    margin-top: 25px;
+  }
+
+}
+
+#step-1 {
+  .step-content {
+    .info-block {
+      .info-text {
+        margin-bottom: 25px;
+
+      }
+      .info-footer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        .btn-purple {
+          margin-bottom: 25px;
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+        .supported {
+          margin-bottom: 25px;
+          line-height: 2.4rem;
+          font-size: 1.2rem;
+          height: 25px;
+          padding-right: 130px;
+          background: url("/static/img/sponsor-logo.png") right center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    .alternative {
+      margin-bottom: 25px;
+      .row {
+        margin: 0;
+      }
+      .header {
+        height: 50px;
+        background-color: $white-color;
+        > div {
+          label {
+            margin: 0;
+          }
+        }
+      }
+      .rate {
+        position: relative;
+        min-height: 130px;
+        background-color: #EFF3F6
+      }
+      .premium {
+        background-color: $white-color;
+        border: 3px solid $primary-bright-color;
+        &::after {
+          position: absolute;
+          transform: rotate(90deg);
+          z-index: 2;
+          overflow: hidden;
+          right: -77px;
+          font-size: 1.2rem;
+          line-height: 2.4rem;
+          display: block;
+          content: attr(data-special);
+          color: $white-color;
+          background-color: $primary-bright-color;
+          width: 130px;
+          height: 25px;
+        }
+      }
+    }
+    .options,.category {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-height: 50px;
+      label {
+        margin: 0;
+      }
+    }
+    .options{
+      justify-content: center;
+      background-color: $white-color;
+    }
+    .category {
+      justify-content: flex-start;
+      label {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+

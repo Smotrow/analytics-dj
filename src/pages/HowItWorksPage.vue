@@ -5,7 +5,7 @@
         div(slot="header")
           h3.weight-3 {{hero.title}}
         div(slot="content")
-          p.none  {{hero.text}}
+          p  {{hero.text}}
         div(slot="footer")
           router-link.btn.btn-primary-bright(:to="{ name: 'WorkPanel' }") Розпочати
           router-link.btn.btn-primary-bright.inverse( :to="{name: 'Main'}") На головну
@@ -18,12 +18,12 @@
             .step-head
               .step-line
               .step-icon
-                p.none.weight-6 {{index+1}}
+                p.weight-6 {{index+1}}
             .step-main
-              p.none {{step.text}}
+              p {{step.text}}
       section#about-section.container-global
         .text-block
-          p.none {{aboutText}}
+          p {{aboutText}}
         .img-block
           img(src="/static/img/asset-how-laptop.png")
 </template>

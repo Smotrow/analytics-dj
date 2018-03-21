@@ -2,103 +2,102 @@
   div.work-panel
     main
       .container-global
-        .step
+        #step-1.step
           .step-header
             .row
               .col-xs-12.link-block
-                router-link.home-link(:to="{name:'Main'}") home
+                router-link.home-link(:to="{name:'Main'}")
+                  p.weight-3.text-black home
               .col-xs-12.title-block
-                .pull-left.step-name
-                  h2.none name
-                .pull-right.step-number
-                  h3.none 1 3
+                .header-wrap
+                  .step-name
+                    h2.text-dark-grey.none name
+                  .step-number
+                    h3.text-dark-grey.none 1 3
           .step-content
             .row
-              .col-md-4
-                .row
+              .col-md-4.info-block
+                .row.text-small
+                  .col-xs-12.info-text
+                    p {{textMore}}
                   .col-xs-12
-                    p.none {{textMore}}
-                  .col-xs-6
-                    a.btn II
-                  .col-xs-6 fdfsd
+                    .info-footer
+                      .button-block
+                        a.btn.btn-purple.btn-sm Обчислювальний інтелект
+                      .supported-block
+                        p.text-purple.supported Supported by
               .col-md-8
                 .row
                   .col-xs-12
                     label email
-                    input
+                    input.classic(v-model="stepFirst.email")
                 .row
                   .col-md-4.col-xs-12
                     label email
-                    input
+                    input.classic(v-model="stepFirst.email")
                   .col-md-4.col-xs-12
                     label email
-                    input
+                    input.classic(v-model="stepFirst.email")
                   .col-md-4.col-xs-12
                     label email
-                    input
-                .alternative.text-center
-                  .row
+                    input.classic(v-model="stepFirst.email")
+                .alternative.text-center.text-small
+                  .row.header.vertical-align
                     .col-xs-4
                       label email
                     .col-xs-4
                       label email
                     .col-xs-4
                       label email
-                  .row.relative
-                    input(type="radio" v-model="test").radio-input
+                  .row.rate.vertical-align
+                    radio-input(:modelObject="stepFirst", typeIndex="rate", value="standard", id="standard")
                     .col-xs-4
-                      label email
+                      p email
                     .col-xs-4
-                      label email
+                      p email
                     .col-xs-4
-                      label email
-                  .row.relative
-                    input(type="radio" v-model="test").radio-input
+                      p email
+                  .row.rate.vertical-align.premium(data-special="Найкраща пропозиція")
+                    radio-input(:modelObject="stepFirst", typeIndex="rate", value="premium", id="premium")
                     .col-xs-4
-                      label email
+                      p email
                     .col-xs-4
-                      label email
+                      p email
                     .col-xs-4
-                      label email
+                      p email
             .row
               .col-md-4.col-xs-12
-                label email
-              .col-md-4.col-xs-12.relative
-                input(type="radio" v-model="test1").radio-input
-                label email
-              .col-md-4.col-xs-12.relative
-                input(type="radio" v-model="test1").radio-input
-                label email
+                .category
+                  h3.none {{textLess}}
+              .col-md-4.col-xs-12
+                .options
+                  radio-input(:modelObject="stepFirst", typeIndex="option", value="1", id="premium1")
+                  label email
+              .col-md-4.col-xs-12
+                .options
+                  radio-input(:modelObject="stepFirst", typeIndex="option", value="2", id="premium2")
+                  label email
 </template>
 
 <script>
-  import SlidersData from '../mixins/sliders-data'
+  import RadioInput from '../components/inputs/RadioInput.vue'
 
   export default {
-    components: {},
+    components: {
+      [RadioInput.name]: RadioInput
+    },
     data () {
       return {
         test: false,
         test1: false,
-        heroBg: 'url(\'/static/img/main-hero.png\')',
-        promoBoards: [
-          {
-            classSize: 'small',
-            text: 'Як працює Analytics?',
-            mainImg: 'url("/static/img/asset-main-device.png")',
-            link: 'how-it-works'
-          }, {
-            classSize: 'small',
-            text: 'Історії користувачів',
-            bgImg: 'url("/static/img/asset-main-2.jpg")',
-            link: 'stories'
-          }, {
-            classSize: 'big',
-            text: 'Про систему Analytics',
-            bgImg: 'url("/static/img/asset-main-1.jpg")',
-            link: 'about-system'
-          }
-        ],
+        stepFirst: {
+          email: '',
+          lastName: '',
+          firstName: '',
+          middleName: '',
+          rate: '',
+          option: ''
+        },
         textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
         'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
         'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
@@ -112,25 +111,4 @@
 </script>
 
 <style lang="scss">
-  .relative {
-    position: relative;
-  }
-
-  .alternative {
-    .radio-input {
-      left: 0;
-      top: 0;
-      position: absolute;
-      width: 10px;
-      margin-left: 15px;
-    }
-  }
-  .radio-input {
-    left: 0;
-    top: 0;
-    z-index: 2;
-    position: absolute;
-    width: 10px;
-    margin-left: 15px;
-  }
 </style>

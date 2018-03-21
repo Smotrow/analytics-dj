@@ -14,15 +14,15 @@
     transition-group(name="fade" mode="in-out")
       .slider-container(v-for="slide in slides", :key='slide.id', v-if="slide.id === slideId")
         .slider-header
-          p.none {{title}}
+          p {{title}}
         .slider-content.container-global
           .img-block
             img(:src="slide.bgImg")
           .text-block
             .content-title
-              p.none.weight-6 {{slide.title}}
+              p.weight-6 {{slide.title}}
             .content-text
-              p.none {{slide.text}}
+              p {{slide.text}}
 </template>
 
 <script>

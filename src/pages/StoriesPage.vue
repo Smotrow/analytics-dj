@@ -6,13 +6,13 @@
           h3.weight-3 Як Analytics змінює є,
             font.text-primary  де ми знаходимось
         div(slot="content")
-          p.none {{hero.text}}
+          p {{hero.text}}
     main
       section.info-section
         .container-global
           .row
             .col-xs-12.col-sm-9.col-md-6
-              p.none.weight-6 {{textInfo}}
+              p.weight-6 {{textInfo}}
       demo-stories(:stories="demoStories")
 </template>
 

@@ -5,7 +5,7 @@
       .details-line.container-global
         .details-content
           .text-block
-            p.none {{board.text}}
+            p {{board.text}}
           .link-block
             router-link.arrow-link(:to="board.link")
 </template>

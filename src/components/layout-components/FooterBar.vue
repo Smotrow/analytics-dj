@@ -19,7 +19,7 @@
               li
                 a office@domjurista.ua
       .copyright
-        p.none Дом Юриста, 2018, All rights reserved
+        p Дом Юриста, 2018, All rights reserved
 </template>
 
 <script>
