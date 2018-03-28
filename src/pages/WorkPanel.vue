@@ -22,7 +22,7 @@
                 .col-xs-12
                   .info-footer
                     .button-block
-                      a.btn.btn-purple.btn-sm Обчислювальний інтелект
+                      span.btn-purple Обчислювальний інтелект
                     .supported-block
                       p.text-purple.supported Supported by
             .col-md-8
@@ -30,7 +30,7 @@
                 .col-xs-12
                   label email
                   input.classic(v-model="stepFirst.email")
-              .row
+              //.row
                 .col-md-4.col-xs-12
                   label email
                   input.classic(v-model="stepFirst.email")
@@ -61,19 +61,20 @@
                   .col-xs-4
                     p email
                   .col-xs-4
-                    p пездюк
-                  .col
+                    p email
+                  .col-xs-4
+                    p email
           .row
             .col-md-4.col-xs-12
               .category
                 h3.none {{textLess}}
             .col-md-4.col-xs-12
               .options
-                radio-input(:modelObject="stepFirst", typeIndex="option", value="1", id="premium1")
+                radio-input(:modelObject="stepFirst", typeIndex="rate", value="1", id="premium1")
                 label email
             .col-md-4.col-xs-12
               .options
-                radio-input(:modelObject="stepFirst", typeIndex="option", value="2", id="premium2")
+                radio-input(:modelObject="stepFirst", typeIndex="rate", value="2", id="premium2")
                 label email
           .row
             .col-xs-12.text-right
@@ -100,7 +101,7 @@
               .row.back-wrap
                 .col-xs-12.back
                   p.weight-6(@click="previousStep") Back
-        #step-3.steps(v-show="currentStep === 3")
+        #step-3.steps(v-show="currentStep === 3 && !isPaid")
           .row
             .col-md-6.col-xs-12
               .result
@@ -121,15 +122,27 @@
                   i.more-info
                   p.weight-4 {{textLess}}
                 .opportunities.text-small
-                  i.variantes
+                  i.variants
                   p.weight-4 {{textLess}}
                 .cost
                   p.weight-6 Cost - 1000
                 .result-footer
+                  .send-block(@click="payment")
+                    p.weight-6 Send
+                    i.send
+        #step-after-payment.steps(v-show="currentStep === 3 && isPaid")
+          .row
+            .col-sm-8.col-sm-offset-2.col-xs-12
+              .result
+                i.logo
+                .result-header
+                  p.weight-6 {{textLess}}
+                .result-content.text-small
+                  p.weight-4  {{textLess}}
+                .result-footer
                   .send-block
                     p.weight-6 Send
                     i.send
-
 </template>
 
 <script>
@@ -143,6 +156,7 @@
     mixins: [StepsData],
     data () {
       return {
+        isPaid: false,
         test: false,
         test1: false,
         stepFirst: {
@@ -201,6 +215,9 @@
       previousStep () {
         --this.currentStep
         this.step = this.steps[this.currentStep - 1]
+      },
+      payment () {
+        this.isPaid = true
       }
     }
   }

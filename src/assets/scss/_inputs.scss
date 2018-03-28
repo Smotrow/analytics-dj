@@ -46,7 +46,7 @@ input.classic {
     color: $white-color;
     font-size: 1.25rem;
     cursor: pointer;
-    transition: all 0.25s linear;
+    transition: all 0.05s linear;
     &::before {
       display: inline-block;
       content: "";
@@ -55,7 +55,7 @@ input.classic {
       margin-right: 0.625rem;
       border: 2px solid $primary-bright-color;
       border-radius: 50%;
-      transition: all 0.25s linear;
+      transition: all 0.05s linear;
     }
   }
 }
