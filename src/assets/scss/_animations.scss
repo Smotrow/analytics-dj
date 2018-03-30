@@ -1,0 +1,332 @@
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName}  {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyframes(r-arrow) {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animation {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  background-color: rgba(43, 84, 44, 0.04);
+  > div {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transition: all 1s linear;
+
+    .element {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      height: 20px;
+      width: 20px;
+      background-color: $primary-bright-color;
+      border-radius: 50%;
+      transition: all 1s linear;
+      /*border: 20px solid transparent;
+      border-bottom: 20px solid $primary-bright-color;*/
+    }
+    .line {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      visibility: hidden;
+      height: 1px;
+      width: 20px;
+      background-color: $black-color;
+      transition: all 1s linear;
+      /*border: 20px solid transparent;
+      border-bottom: 20px solid $primary-bright-color;*/
+    }
+    &.start {
+      #el_1 {
+        top: 244px;
+        left: 20px;
+      }
+      #el_2 {
+        top: 160px;
+        left: 120px;
+      }
+      #el_3 {
+        top: 100px;
+        left: 20px;
+      }
+      #el_4 {
+        top: 140px;
+        left: 40px;
+      }
+      #el_5 {
+        top: 180px;
+        left: 160px;
+      }
+      #el_6 {
+        top: 220px;
+        left: 90px;
+      }
+      #el_7 {
+        top: 260px;
+        left: 80px;
+      }
+      #el_8 {
+        top: 20px;
+        left: 80px;
+      }
+      #el_9 {
+        top: 20px;
+        left: 200px;
+      }
+      #el_10 {
+        top: 55px;
+        left: 55px;
+      }
+      #el_11 {
+        top: 20px;
+        left: 20px;
+      }
+      #el_12 {
+        top: 260px;
+        left: 270px;
+      }
+      #el_13 {
+        top: 130px;
+        left: 175px;
+      }
+      #el_14 {
+        top: 140px;
+        left: 240px;
+      }
+      #el_15 {
+        top: 270px;
+        left: 120px;
+      }
+      #el_16 {
+        top: 110px;
+        left: 197px;
+      }
+      #el_17 {
+        top: 240px;
+        left: 280px;
+      }
+      #el_18 {
+        top: 20px;
+        left: 280px;
+      }
+      #el_19 {
+        top: 60px;
+        left: 260px;
+      }
+      #el_20 {
+        top: 150px;
+        left: 280px;
+      }
+    }
+    &.animate_1 {
+      #el_1 {
+        top: 20px;
+        left: 20px;
+      }
+      #el_2 {
+        top: 60px;
+        left: 60px;
+      }
+      #el_3 {
+        top: 100px;
+        left: 100px;
+        background-color: $purple-color;
+      }
+      #el_4 {
+        top: 140px;
+        left: 140px;
+      }
+      #el_5 {
+        top: 180px;
+        left: 180px;
+      }
+      #el_6 {
+        top: 220px;
+        left: 220px;
+      }
+      #el_7 {
+        top: 260px;
+        left: 260px;
+        background-color: $purple-color;
+      }
+      #el_8 {
+        top: 20px;
+        left: 260px;
+      }
+      #el_9 {
+        top: 60px;
+        left: 220px;
+      }
+      #el_10 {
+        top: 100px;
+        left: 180px;
+        background-color: $purple-color;
+      }
+      #el_11 {
+        top: 140px;
+        left: 140px;
+      }
+      #el_12 {
+        top: 180px;
+        left: 100px;
+      }
+      #el_13 {
+        top: 220px;
+        left: 60px;
+      }
+      #el_14 {
+        top: 260px;
+        left: 20px;
+        background-color: $purple-color;
+      }
+      #el_15 {
+        top: 140px;
+        left: 30px;
+      }
+      #el_16 {
+        top: 30px;
+        left: 140px;
+        background-color: $purple-color;
+      }
+      #el_17 {
+        top: 250px;
+        left: 140px;
+      }
+      #el_18 {
+        top: 140px;
+        left: 250px;
+      }
+      #el_19 {
+        top: 200px;
+        left: 140px;
+      }
+      #el_20 {
+        top: 80px;
+        left: 140px;
+      }
+    }
+    &.animate_2 {
+      transform: rotate(135deg);
+      border: 1px solid black;
+      border-radius: 50%;
+      #el_1 {
+        top: 220px;
+        left: 60px;
+      }
+      #el_2 {
+        top: 60px;
+        left: 60px;
+      }
+      #el_3 {
+        top: 100px;
+        left: 100px;
+        background-color: $purple-color;
+      }
+      #el_4 {
+        top: 140px;
+        left: 140px;
+      }
+      #el_5 {
+        top: 180px;
+        left: 180px;
+        background-color: $purple-color;
+      }
+      #el_6 {
+        top: 220px;
+        left: 220px;
+      }
+      #el_7 {
+        top: 80px;
+        left: 140px;
+        background-color: $purple-color;
+      }
+      #el_8 {
+        top: 60px;
+        left: 220px;
+      }
+      #el_9 {
+        top: 250px;
+        left: 140px;
+      }
+      #el_10 {
+        top: 100px;
+        left: 180px;
+        background-color: $purple-color;
+      }
+      #el_11 {
+        top: 140px;
+        left: 140px;
+      }
+      #el_12 {
+        top: 180px;
+        left: 100px;
+        background-color: $purple-color;
+      }
+      #el_13 {
+        top: 140px;
+        left: 80px;
+        background-color: $purple-color;
+      }
+      #el_14 {
+        top: 140px;
+        left: 200px;
+        background-color: $purple-color;
+      }
+      #el_15 {
+        top: 140px;
+        left: 30px;
+      }
+      #el_16 {
+        top: 30px;
+        left: 140px;
+        background-color: $purple-color;
+      }
+      #el_17 {
+        top: 30px;
+        left: 140px;
+      }
+      #el_18 {
+        top: 140px;
+        left: 250px;
+      }
+      #el_19 {
+        top: 200px;
+        left: 140px;
+        background-color: $purple-color;
+      }
+      #el_20 {
+        top: 80px;
+        left: 140px;
+        background-color: $purple-color;
+      }
+    }
+  }
+}

@@ -84,8 +84,9 @@
             .col-sm-push-6.col-sm-5.col-sm-offset-1.col-xs-12.animation-block
               p.header.weight-6 {{textLess}}
               .animation
-                //TODO: animation
-                img(src="/static/img/animation-img.png")
+                div(:class="animationClass")
+                  .element(v-for="n in 20", :id="'el_'+n")
+                  .line(v-for="n in 10", :id="'ln_'+n")
             .col-sm-pull-6.col-sm-6.col-xs-12.questions-block(v-for="question in questions", v-if="question.id === currentQuestion")
               .row.question-wrap
                 .col-xs-12.header
@@ -113,7 +114,7 @@
                 .result-footer
                   .send-block
                     p.weight-6 Send
-                    i.send
+                    .send
             .col-md-6.col-xs-12
               .premium-result
                 .result-header
@@ -168,6 +169,7 @@
           option: ''
         },
         step: {},
+        animationClass: 'start',
         currentStep: 1,
         currentQuestion: 0,
         questions: [
@@ -183,9 +185,17 @@
             id: 1,
             question: 'Lorem ipsum dolor sit amet. ',
             answers: [
-              'Lorem ipsum dolor sit amet. ',
-              'Lorem ipsum dolor sit amet. ',
-              'Lorem ipsum dolor sit amet. '
+              'sdsds. ',
+              'dsar sit amet. ',
+              'Loremsdsit amet. '
+            ]
+          }, {
+            id: 2,
+            question: 'Lorem ipsum dolor sit amet. ',
+            answers: [
+              'fdsfsfsd. ',
+              'asdsa. ',
+              'dsdst. '
             ]
           }
         ],
@@ -209,8 +219,7 @@
       nextQuestion (question, answer) {
         if (this.currentQuestion + 1 === this.questions.length) this.nextStep()
         ++this.currentQuestion
-        console.log(question)
-        console.log(answer)
+        this.animationClass = 'animate_' + this.currentQuestion
       },
       previousStep () {
         --this.currentStep
