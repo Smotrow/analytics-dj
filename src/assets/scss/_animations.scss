@@ -1386,12 +1386,12 @@
         }
       }
       &.animate_9 {
-        transform: rotate(800deg);
+        transform: rotate(810deg);
         border: 1px solid $black-color;
         border-radius: 50%;
 
         .element {
-          transform: rotate(-800deg) scale(1);
+          transform: rotate(-810deg) scale(1);
           height: 20px;
           width: 20px;
           @include circle()
