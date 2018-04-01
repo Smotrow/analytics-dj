@@ -191,7 +191,6 @@
     margin-top: 35.6px;
     display: flex;
     min-height: 364.4px;
-    width: 100%;
     padding: 15px;
     align-items: center;
     justify-content: center;
@@ -306,3 +305,16 @@
   background-color: $overlay-color;
 }
 
+@media screen and (max-width: 986px) {
+  .step-header .link-block .home-link p {
+    left: 0;
+  }
+  #step-1 .alternative .premium::after {
+    transform: rotate(0deg) translate(50%);
+    bottom: -25px;
+    right: 50%;
+    content: attr(data-special);
+    width: calc(100% + 6px);
+    height: 25px;
+  }
+}

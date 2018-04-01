@@ -83,14 +83,15 @@
               a.next.btn.btn-primary-bright(@click="nextStep") Далі
         #step-2.steps(v-show="currentStep === 2", :key="2")
           .row
-            .col-sm-push-6.col-sm-5.col-sm-offset-1.col-xs-12.animation-block
+            .col-md-push-6.col-md-5.col-md-offset-1.col-xs-12.animation-block
               .col-xs-12
                 p.header.weight-6 {{textLess}}
               .animation(@click="refresh")
-                div(:class="animationClass")
-                  .element(v-for="n in 20", :id="'el_'+n")
-                  .line(v-for="n in 10", :id="'ln_'+n")
-            .col-sm-pull-6.col-sm-6.col-xs-12.questions-block(v-for="(question,index) in questions", v-if="question.id === currentQuestion")
+                .animation-wrap
+                  div(:class="animationClass")
+                    .element(v-for="n in 20", :id="'el_'+n")
+                    .line(v-for="n in 10", :id="'ln_'+n")
+            .col-md-pull-6.col-md-6.col-xs-12.questions-block(v-for="(question,index) in questions", v-if="question.id === currentQuestion")
               .col-xs-12
                 .row.question-wrap(v-if="!questionEnd", :key="'question'")
                   .col-xs-12.header
@@ -104,9 +105,10 @@
                     i.check
                     p {{answer}}
                 .row.result-wrap(v-if="questionEnd", :key="'result'")
-                  p.weight-6 {{ loading ? 'wait' : 'result'}}
+                  .col-xs-12
+                    p.weight-6 {{ loading ? 'wait' : 'result'}}
                 .row.back-wrap
-                  .col-xs-12.back
+                  .col-xs-12.back(:class="[questionEnd ? 'text-right' : 'text-left']")
                     transition(name="fade")
                       p.weight-6(@click="previousStep" v-if="!questionEnd") Back
                       p.weight-6(@click="nextStep" v-else=) Next
@@ -196,9 +198,13 @@
         this.currentQuestion = 0
         this.animationClass = 'start'
       },
+      scrollTop () {
+        window.scrollTo(0, 0)
+      },
       nextStep () {
         ++this.currentStep
         this.step = this.steps[this.currentStep - 1]
+        this.scrollTop()
       },
       nextQuestion (question, answer) {
         if (this.currentQuestion + 1 === this.questions.length) {
@@ -216,6 +222,7 @@
       previousStep () {
         --this.currentStep
         this.step = this.steps[this.currentStep - 1]
+        this.scrollTop()
       },
       payment () {
         this.isPaid = true
