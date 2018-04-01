@@ -206,7 +206,7 @@
           this.questionEnd = true
           setTimeout(() => {
             this.loading = false
-            console.log(this.loading)
+            this.animationClass = 'final'
           }, 2000)
         } else {
           ++this.currentQuestion
