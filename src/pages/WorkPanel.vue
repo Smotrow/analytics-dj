@@ -2,7 +2,7 @@
   div.work-panel
     main
       #loading(v-if="loading")
-        socket
+        jumper
       .container-global
         .step-header
           .row
@@ -85,7 +85,7 @@
           .row
             .col-md-push-6.col-md-5.col-md-offset-1.col-xs-12.animation-block
               .col-xs-12.text-center
-                p.header.weight-6(@click="hide = true", v-if="!hide") Center title
+                //p.header.weight-6 Center title
               .animation(@click="refresh")
                 .animation-wrap
                   div(:class="animationClass")
@@ -108,10 +108,12 @@
                   .col-xs-12
                     p.weight-6 {{ loading ? 'wait' : 'result'}}
                 .row.back-wrap
-                  .col-xs-12.back(:class="[questionEnd ? 'text-right' : 'text-left']")
-                    transition(name="fade")
+                  .col-xs-12.back
                       p.weight-6(@click="previousStep" v-if="!questionEnd") Back
-                      p.weight-6(@click="nextStep" v-else=) Next
+          transition(name="fade")
+            .row(v-if="questionEnd")
+              .col-xs-12.text-right
+                a.next.btn.btn-primary-bright(@click="nextStep") Далі
         #step-3.steps(v-show="currentStep === 3 && !isPaid", :key="3")
           .row
             .col-md-6.col-xs-12
@@ -159,11 +161,11 @@
 <script>
   import RadioInput from '../components/inputs/RadioInput.vue'
   import StepsData from '../mixins/steps-data'
-  import Socket from 'vue-loading-spinner/src/components/Socket'
+  import Jumper from 'vue-loading-spinner/src/components/Jumper'
 
   export default {
     components: {
-      Socket,
+      Jumper,
       [RadioInput.name]: RadioInput
     },
     mixins: [StepsData],
@@ -178,7 +180,6 @@
           rate: '',
           option: ''
         },
-        hide: false,
         loading: false,
         questionEnd: false,
         animationClass: 'start',

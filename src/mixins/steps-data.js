@@ -17,7 +17,7 @@ export default {
           text: 'Про систему Analytics'
         }
       ],
-      currentStep: 2,
+      currentStep: 1,
       currentQuestion: 0,
       questions: [
         {

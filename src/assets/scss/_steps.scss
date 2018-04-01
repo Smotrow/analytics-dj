@@ -130,11 +130,6 @@
       font-size: 2rem;
     }
   }
-  .next {
-    min-width: 120px;
-    line-height: 1;
-    margin-top: 25px;
-  }
 }
 
 #step-2 {
@@ -317,4 +312,10 @@
     width: calc(100% + 6px);
     height: 25px;
   }
+}
+
+.btn.next {
+  min-width: 120px;
+  line-height: .7;
+  margin-top: 25px;
 }

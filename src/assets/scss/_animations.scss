@@ -17,18 +17,18 @@
   $subcolor: $dark-nav;
   $line-color: rgba(0, 0, 0, 0.45);;
   $green: $color-green;
-  @mixin triangleTop($color: $primary-bright-color) {
+  @mixin triangleTop($color: $primary) {
     background-color: transparent;
     border-radius: 0;
     @include triangle(top, 30px, 15px, $color);
   }
 
-  @mixin circle($color: $primary-bright-color) {
+  @mixin circle($color: $primary) {
     background-color: $color;
     border-radius: 50%;
   }
 
-  @mixin rhombus($color: $primary-bright-color) {
+  @mixin rhombus($color: $primary) {
     background-color: $color;
     transform: rotate(45deg) scale(0.85);
   }
@@ -58,7 +58,7 @@
         display: block;
         height: 20px;
         width: 20px;
-        background-color: $primary-bright-color;
+        background-color: $primary;
         //border-radius: 50%;
         transition: all 1s ease;
         //border: 20px solid transparent;
@@ -1018,7 +1018,8 @@
           @include triangleTop()
         }
       }
-      &.animate_7 {
+      //Clocks
+      /*&.animate_7 {
         transform: rotate(720deg);
 
         .line {
@@ -1140,8 +1141,8 @@
           @include triangleTop();
           transform: rotate(-360deg);
         }
-      }
-      &.animate_8 {
+      }*/
+      &.animate_7 {
         transform: rotate(630deg);
 
         .element {
@@ -1255,7 +1256,7 @@
         }
       }
 
-      &.animate_9 {
+      &.animate_8 {
         transform: rotate(720deg);
 
         .element {
@@ -1353,14 +1354,44 @@
           top: 80px;
           left: 140px;
         }
+        #ln_1 {
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-15deg) scaleY(.7);
+        }
+        #ln_2 {
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(15deg) scaleX(.7);
+        }
+        #ln_3 {
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg) scaleX(.7);
+        }
       }
-      &.final {
-        transform: rotate(765deg);
+      &.animate_9 {
+        transform: rotate(800deg);
         border: 1px solid $black-color;
         border-radius: 50%;
 
         .element {
-          transform: rotate(-765deg);
+          transform: rotate(-800deg) scale(1);
           height: 20px;
           width: 20px;
           @include circle()
@@ -1454,6 +1485,189 @@
           top: 80px;
           left: 140px;
           background-color: $purple-color;
+        }
+        #ln_1 {
+          opacity: 1;
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-15deg) scaleY(.7);
+        }
+        #ln_2 {
+          opacity: 1;
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(15deg) scaleX(.7);
+        }
+        #ln_3 {
+          opacity: 1;
+          border: 0 solid $primary;
+          top: 50%;
+          height: 0;
+          background-color: transparent;
+          width: 0;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg) scaleX(.7);
+        }
+      }
+      &.final {
+        transform: rotate(765deg);
+        border: 0 solid $black-color;
+        border-radius: 0;
+
+        .element {
+          transform: rotate(-765deg);
+          transition: all 5s ease;
+          @include circle()
+        }
+
+        .line {
+          opacity: 1;
+        }
+        #el_1 {
+          top: 260px;
+          left: 90px;
+          height: 50px;
+          width: 50px;
+          background-color: $footer-color;
+          border: 10px solid $primary;
+          transition: all 1s ease .2s;
+        }
+        #el_2 {
+          height: 40px;
+          width: 40px;
+          top: 80px;
+          left: 80px;
+          transition: all 1s ease .4s;
+        }
+        #el_3 {
+          top: 1120px;
+          left: -1140px;
+        }
+        #el_4 {
+          height: 40px;
+          width: 40px;
+          top: 140px;
+          left: 245px;
+          background-color: $footer-color;
+          border: 5px solid $primary;
+          transition: all 1s ease .6s;
+        }
+        #el_5 {
+          top: -1280px;
+          left: -1280px;
+          background-color: $purple-color;
+        }
+        #el_6 {
+          top: 1290px;
+          left: -1120px;
+        }
+        #el_7 {
+          top: -1280px;
+          left: 135px;
+          background-color: $purple-color;
+        }
+        #el_8 {
+          top: 1260px;
+          left: 135px;
+        }
+        #el_9 {
+          top: 135px;
+          left: 1240px;
+        }
+        #el_10 {
+          top: 1350px;
+          left: 1380px;
+          background-color: $purple-color;
+        }
+        #el_11 {
+          top: -1110px;
+          left: -1120px;
+        }
+        #el_12 {
+          top: -1110px;
+          left: 20px;
+          background-color: $purple-color;
+        }
+        #el_13 {
+          top: -1240px;
+          left: -380px;
+          background-color: $purple-color;
+        }
+        #el_14 {
+          top: 1180px;
+          left: 90px;
+          background-color: $purple-color;
+        }
+        #el_15 {
+          top: 1160px;
+          left: 360px;
+        }
+        #el_16 {
+          top: 370px;
+          left: 1110px;
+          background-color: $purple-color;
+        }
+        #el_17 {
+          top: 1360px;
+          left: 140px;
+        }
+        #el_18 {
+          top: 1120px;
+          left: 10px;
+        }
+        #el_19 {
+          top: 1110px;
+          left: 1120px;
+          background-color: $purple-color;
+        }
+        #el_20 {
+          top: 1110px;
+          left: 370px;
+          background-color: $purple-color;
+        }
+        #ln_1 {
+          border: 10px solid $primary;
+          top: 50%;
+          height: 60%;
+          background-color: transparent;
+          width: 100%;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-15deg) scaleY(.7);
+          transition: all 1s ease;
+        }
+        #ln_2 {
+          border: 10px solid $primary;
+          top: 50%;
+          height: 100%;
+          background-color: transparent;
+          width: 60%;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(15deg) scaleX(.7);
+          transition: all 1s ease .2s;
+        }
+        #ln_3 {
+          border: 10px solid $primary;
+          top: 50%;
+          height: 100%;
+          background-color: transparent;
+          width: 60%;
+          border-radius: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg) scaleX(.7);
+          transition: all 1s ease .4s;
         }
       }
     }
