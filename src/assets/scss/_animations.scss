@@ -14,8 +14,8 @@
   overflow: hidden;
   $purple: #5752a3;
   $primary: #7ed0e0;
-  $subcolor: #739dd3;
-  $line-color: #d3d3d3;
+  $subcolor: $dark-nav;
+  $line-color: rgba(0, 0, 0, 0.45);;
   $green: $color-green;
   @mixin triangleTop($color: $primary-bright-color) {
     background-color: transparent;
@@ -39,7 +39,7 @@
   justify-content: center;
   height: 400px;
   width: 100%;
-  background-color: rgba(43, 84, 44, 0.04);
+  //background-color: rgba(43, 84, 44, 0.04);
   .animation-wrap {
     display: flex;
     position: relative;
@@ -1356,7 +1356,7 @@
       }
       &.final {
         transform: rotate(765deg);
-        border: 1px solid $line-color;
+        border: 1px solid $black-color;
         border-radius: 50%;
 
         .element {

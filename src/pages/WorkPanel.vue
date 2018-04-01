@@ -84,8 +84,8 @@
         #step-2.steps(v-show="currentStep === 2", :key="2")
           .row
             .col-md-push-6.col-md-5.col-md-offset-1.col-xs-12.animation-block
-              .col-xs-12
-                p.header.weight-6 {{textLess}}
+              .col-xs-12.text-center
+                p.header.weight-6(@click="hide = true", v-if="!hide") Center title
               .animation(@click="refresh")
                 .animation-wrap
                   div(:class="animationClass")
@@ -178,6 +178,7 @@
           rate: '',
           option: ''
         },
+        hide: false,
         loading: false,
         questionEnd: false,
         animationClass: 'start',
