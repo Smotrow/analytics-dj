@@ -12,10 +12,10 @@
 
 .animation {
   overflow: hidden;
-  $purple: $purple-color;
-  $primary: $primary-bright-color;
-  $dark: $dark-nav;
-  $black: rgba(0, 0, 0, 0.45);
+  $purple: #5752a3;
+  $primary: #7ed0e0;
+  $subcolor: #739dd3;
+  $line-color: #d3d3d3;
   $green: $color-green;
   @mixin triangleTop($color: $primary-bright-color) {
     background-color: transparent;
@@ -73,7 +73,7 @@
         top: 50%;
         left: 50%;
         opacity: 0;
-        background-color: $black;
+        background-color: $line-color;
         transition: opacity 0.5s;
       }
       //    transform: rotate(-45deg);
@@ -83,48 +83,48 @@
           width: 30px;
         }
         #el_1 {
-          top: 25px;
+          top: 245px;
           left: 36px;
           background-color: $purple;
         }
         #el_2 {
-          top: 80px;
-          left: 36px;
-          @include triangleTop($dark)
-        }
-        #el_3 {
           top: 135px;
           left: 36px;
-          @include rhombus()
+          @include triangleTop($subcolor)
+        }
+        #el_3 {
+          top: 80px;
+          left: 36px;
+          @include circle($purple)
         }
         #el_4 {
           top: 190px;
           left: 36px;
-          @include circle()
+          @include triangleTop()
         }
         #el_5 {
-          top: 245px;
-          left: 36px;
+          top: 80px;
+          left: 102px;
           @include triangleTop($green)
         }
         #el_6 {
           top: 25px;
           left: 102px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_7 {
-          top: 80px;
-          left: 102px;
+          top: 25px;
+          left: 36px;
         }
         #el_8 {
-          top: 135px;
+          top: 190px;
           left: 102px;
           background-color: $green;
         }
         #el_9 {
-          top: 190px;
+          top: 135px;
           left: 102px;
-          @include rhombus()
+          @include circle()
         }
         #el_10 {
           top: 245px;
@@ -132,22 +132,22 @@
           @include circle($purple)
         }
         #el_11 {
-          top: 25px;
+          top: 135px;
           left: 168px;
           @include triangleTop($green)
         }
         #el_12 {
-          top: 80px;
+          top: 25px;
           left: 168px;
-          @include rhombus()
+          @include circle()
         }
         #el_13 {
-          top: 135px;
+          top: 190px;
           left: 168px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_14 {
-          top: 190px;
+          top: 80px;
           left: 168px;
           background-color: $purple;
         }
@@ -158,12 +158,12 @@
         #el_16 {
           top: 25px;
           left: 234px;
-          background-color: $dark;
+          background-color: $subcolor;
         }
         #el_17 {
           top: 80px;
           left: 234px;
-          @include triangleTop()
+          @include triangleTop($purple)
         }
         #el_18 {
           top: 135px;
@@ -173,7 +173,7 @@
         #el_19 {
           top: 190px;
           left: 234px;
-          @include rhombus($dark)
+          @include circle($subcolor)
         }
         #el_20 {
           top: 245px;
@@ -183,7 +183,7 @@
         /*#ln_1 {
           visibility: visible;
           top: 30px;
-          background-color: $black;
+          background-color: $line-color;
           height: 120px;
           width: 1px;
           left: 51px;
@@ -229,17 +229,17 @@
         #el_2 {
           top: 80px;
           left: 102px;
-          @include triangleTop($dark)
+          @include triangleTop($subcolor)
         }
         #el_3 {
           top: 135px;
           left: 102px;
-          @include rhombus()
+          @include circle()
         }
         #el_4 {
           top: 190px;
           left: 168px;
-          @include circle()
+          @include triangleTop()
         }
         #el_5 {
           top: 25px;
@@ -249,7 +249,7 @@
         #el_6 {
           top: 25px;
           left: 102px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_7 {
           top: 80px;
@@ -277,12 +277,12 @@
         #el_12 {
           top: 80px;
           left: 168px;
-          @include rhombus()
+          @include circle()
         }
         #el_13 {
           top: 135px;
           left: 168px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_14 {
           top: 190px;
@@ -296,7 +296,7 @@
         #el_16 {
           top: 245px;
           left: 36px;
-          background-color: $dark;
+          background-color: $subcolor;
         }
         #el_17 {
           top: 80px;
@@ -311,7 +311,7 @@
         #el_19 {
           top: 190px;
           left: 234px;
-          @include rhombus($dark)
+          @include circle($subcolor)
         }
         #el_20 {
           top: 245px;
@@ -320,7 +320,7 @@
         }
         #ln_1 {
           top: 30px;
-          background-color: $black;
+          background-color: $line-color;
           height: 230px;
           width: 1px;
           left: 51px;
@@ -364,7 +364,7 @@
         #el_2 {
           top: 190px;
           left: 234px;
-          @include triangleTop($dark)
+          @include triangleTop($subcolor)
         }
         #el_3 {
           top: 25px;
@@ -384,7 +384,7 @@
         #el_6 {
           top: 190px;
           left: 168px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_7 {
           top: 245px;
@@ -406,7 +406,7 @@
         #el_11 {
           top: 135px;
           left: 234px;
-          @include triangleTop($dark)
+          @include triangleTop($subcolor)
         }
         #el_12 {
           top: 80px;
@@ -416,7 +416,7 @@
         #el_13 {
           top: 135px;
           left: 168px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_14 {
           top: 80px;
@@ -430,7 +430,7 @@
         #el_16 {
           top: 245px;
           left: 234px;
-          background-color: $dark;
+          background-color: $subcolor;
         }
         #el_17 {
           top: 80px;
@@ -453,7 +453,7 @@
         }
         #ln_1 {
           top: 85px;
-          background-color: $black;
+          background-color: $line-color;
           height: 175px;
           width: 1px;
           left: 51px;
@@ -492,17 +492,17 @@
         #el_1 {
           top: 25px;
           left: 36px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_2 {
           top: 190px;
           left: 234px;
-          @include rhombus($dark)
+          @include circle($subcolor)
         }
         #el_3 {
           top: 25px;
           left: 102px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_4 {
           top: 80px;
@@ -519,23 +519,23 @@
         #el_6 {
           top: 190px;
           left: 168px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(-225deg);
         }
         #el_7 {
           top: 245px;
           left: 36px;
-          @include rhombus()
+          @include circle()
         }
         #el_8 {
           top: 135px;
           left: 36px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_9 {
           top: 245px;
           left: 102px;
-          @include rhombus()
+          @include circle()
         }
         #el_10 {
           top: 190px;
@@ -546,7 +546,7 @@
         #el_11 {
           top: 135px;
           left: 234px;
-          @include rhombus($green)
+          @include circle($green)
         }
         #el_12 {
           top: 80px;
@@ -557,47 +557,47 @@
         #el_13 {
           top: 135px;
           left: 168px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(90deg);
         }
         #el_14 {
           top: 80px;
           left: 36px;
-          @include rhombus($purple);
+          @include circle($purple);
         }
         #el_15 {
           top: 245px;
           left: 168px;
-          @include rhombus($dark)
+          @include circle($subcolor)
         }
         #el_16 {
           top: 245px;
           left: 234px;
-          @include rhombus($dark)
+          @include circle($subcolor)
         }
         #el_17 {
           top: 80px;
           left: 234px;
-          @include rhombus($green)
+          @include circle($green)
         }
         #el_18 {
           top: 25px;
           left: 234px;
-          @include rhombus($green)
+          @include circle($green)
         }
         #el_19 {
           top: 25px;
           left: 168px;
-          @include rhombus($green)
+          @include circle($green)
         }
         #el_20 {
           top: 190px;
           left: 36px;
-          @include rhombus()
+          @include circle()
         }
         #ln_1 {
           top: 40px;
-          background-color: $black;
+          background-color: $line-color;
           height: 215px;
           width: 1px;
           left: 51px;
@@ -657,7 +657,7 @@
         #el_5 {
           top: 155px;
           left: 135px;
-          @include circle($dark);
+          @include circle($subcolor);
         }
         #el_6 {
           top: 190px;
@@ -673,7 +673,7 @@
         #el_8 {
           top: 135px;
           left: 200px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_9 {
           top: 245px;
@@ -689,7 +689,7 @@
         #el_11 {
           top: 135px;
           left: 70px;
-          @include circle($dark)
+          @include circle($subcolor)
         }
         #el_12 {
           top: 80px;
@@ -700,7 +700,7 @@
         #el_13 {
           top: 115px;
           left: 135px;
-          @include circle($dark);
+          @include circle($subcolor);
         }
         #el_14 {
           top: 80px;
@@ -797,7 +797,7 @@
         #el_5 {
           top: 170px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(180deg);
         }
         #el_6 {
@@ -814,7 +814,7 @@
         #el_8 {
           top: 135px;
           left: 170px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(90deg);
         }
         #el_9 {
@@ -831,7 +831,7 @@
         #el_11 {
           top: 135px;
           left: 100px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(-90deg);
         }
         #el_12 {
@@ -842,7 +842,7 @@
         #el_13 {
           top: 100px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(0deg);
         }
         #el_14 {
@@ -940,7 +940,7 @@
         #el_5 {
           top: 245px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_6 {
           top: 165px;
@@ -955,7 +955,7 @@
         #el_8 {
           top: 205px;
           left: 155px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_9 {
           top: 125px;
@@ -970,7 +970,7 @@
         #el_11 {
           top: 205px;
           left: 115px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_12 {
           top: 85px;
@@ -980,7 +980,7 @@
         #el_13 {
           top: 165px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_14 {
           top: 85px;
@@ -1054,7 +1054,7 @@
         #el_5 {
           top: 150px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(-360deg);
         }
         #el_6 {
@@ -1072,7 +1072,7 @@
         #el_8 {
           top: 220px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
           transform: rotate(-360deg);
         }
         #el_9 {
@@ -1090,7 +1090,7 @@
         #el_11 {
           top: 50px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_12 {
           top: 15px;
@@ -1100,7 +1100,7 @@
         #el_13 {
           top: 120px;
           left: 135px;
-          @include triangleTop($dark);
+          @include triangleTop($subcolor);
         }
         #el_14 {
           top: 15px;
@@ -1152,102 +1152,106 @@
         #el_1 {
           top: 255px;
           left: 135px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_2 {
           top: 45px;
           left: 45px;
-          @include rhombus()
+          @include triangleTop();
+          transform: rotate(-585deg);
         }
         #el_3 {
           top: 55px;
           left: 135px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_4 {
           top: 135px;
           left: 55px;
-          @include rhombus($purple);
+          @include circle($purple);
         }
         #el_5 {
           top: 135px;
           left: 135px;
-          @include rhombus($dark);
+          @include circle($subcolor);
         }
         #el_6 {
           top: 135px;
           left: 175px;
-          @include rhombus();
+          @include circle();
         }
         #el_7 {
           top: 225px;
           left: 45px;
-          @include rhombus()
+          @include triangleTop();
+          transform: rotate(-675deg);
         }
         #el_8 {
           top: 175px;
           left: 155px;
-          @include rhombus();
+          @include circle();
         }
         #el_9 {
           top: 95px;
           left: 115px;
-          @include rhombus()
+          @include circle()
         }
         #el_10 {
           top: 135px;
           left: 95px;
-          @include rhombus();
+          @include circle();
         }
         #el_11 {
           top: 175px;
           left: 115px;
-          @include rhombus();
+          @include circle();
         }
         #el_12 {
           top: 135px;
           left: 215px;
-          @include rhombus($purple);
+          @include circle($purple);
         }
         #el_13 {
           top: 135px;
           left: 135px;
-          @include rhombus($dark);
+          @include circle($subcolor);
         }
         #el_14 {
           top: 135px;
           left: 15px;
-          @include rhombus($purple);
+          @include circle($purple);
         }
         #el_15 {
           top: 95px;
           left: 155px;
-          @include rhombus()
+          @include circle()
         }
         #el_16 {
           top: 225px;
           left: 225px;
-          @include rhombus()
+          @include triangleTop();
+          transform: rotate(-405deg);
         }
         #el_17 {
           top: 135px;
           left: 255px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_18 {
           top: 215px;
           left: 135px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_19 {
           top: 15px;
           left: 135px;
-          @include rhombus($purple)
+          @include circle($purple)
         }
         #el_20 {
           top: 45px;
           left: 225px;
-          @include rhombus()
+          @include triangleTop();
+          transform: rotate(-495deg);
         }
       }
 
@@ -1306,7 +1310,7 @@
         #el_11 {
           top: 140px;
           left: 140px;
-          background-color: $dark;
+          background-color: $subcolor;
         }
         #el_12 {
           top: 180px;
@@ -1352,7 +1356,7 @@
       }
       &.final {
         transform: rotate(765deg);
-        border: 1px solid $black-color;
+        border: 1px solid $line-color;
         border-radius: 50%;
 
         .element {

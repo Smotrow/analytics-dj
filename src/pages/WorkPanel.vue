@@ -195,6 +195,8 @@
     },
     methods: {
       refresh () {
+        this.loading = false
+        this.questionEnd = false
         this.currentQuestion = 0
         this.animationClass = 'start'
       },
