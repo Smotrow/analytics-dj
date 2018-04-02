@@ -3,13 +3,13 @@
     header
       hero-board.about-system-hero(:bgImg="heroBg", :needSubstrate="false")
         div(slot="header")
-          h3.weight-3 Ми не даємо відповіді на запитання. Ми відшукуємо справедливість.
+          h3.weight-3 Як побудовано Дом юриста Analytics
         div(slot="content")
-          p Перший в Україні
-            |  сервіс на основі обчислювального інтелекту, який прогнозує результати рішень судових спорів.
+          p Інформація, яка
+            |  дозволить дізнатися про нашу систему зсередини.
     main
       section#allows-section
-        info-boxes(:slides="allowsSlides", :title="'Analytics дозволяє'")
+        info-boxes(:slides="allowsSlides", :title="'Про Analytics'")
       section#why-section
         slider-full-screen(:slides="whySlides", :title="'Чому Analytics'")
       section#for-who-section

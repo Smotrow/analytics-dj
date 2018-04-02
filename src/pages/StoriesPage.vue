@@ -35,19 +35,19 @@
         demoStories: [
           {
             id: 1,
-            text: 'Як працює Analytics?',
+            text: 'Інформація з історіями наповнюється',
             bgImg: 'url("/static/img/asset-story-1.jpg")'
           }, {
             id: 2,
-            text: 'Історії користувачів',
+            text: 'Інформація з історіями наповнюється',
             bgImg: 'url("/static/img/asset-story-2.jpg")'
           }, {
             id: 3,
-            text: 'Про систему Analytics',
+            text: 'Інформація з історіями наповнюється',
             bgImg: 'url("/static/img/asset-story-3.jpg")'
           }, {
             id: 4,
-            text: 'Про систему Analytics',
+            text: 'Інформація з історіями наповнюється',
             bgImg: 'url("/static/img/asset-story-4.jpg")'
           }
         ],

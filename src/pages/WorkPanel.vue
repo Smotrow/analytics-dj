@@ -30,40 +30,40 @@
             .col-md-8
               .row
                 .col-xs-12
-                  label email
+                  label Email	
                   input.classic(v-model="stepFirst.email")
               //.row
                 .col-md-4.col-xs-12
-                  label email
+                  label Тариф
                   input.classic(v-model="stepFirst.email")
                 .col-md-4.col-xs-12
-                  label email
+                  label Можливості
                   input.classic(v-model="stepFirst.email")
                 .col-md-4.col-xs-12
-                  label email
+                  label Вартість
                   input.classic(v-model="stepFirst.email")
               .alternative.text-center.text-small
                 .row.header.vertical-align
                   .col-xs-4
-                    label email
+                    label Стандарт
                   .col-xs-4
-                    label email
+                    label Загальний висновок за наслідками аналізу ситуації
                   .col-xs-4
-                    label email
+                    label Безкоштовно
                 .row.rate.vertical-align
                   radio-input(:modelObject="stepFirst", typeIndex="rate", value="standard", id="standard")
                   .col-xs-4
-                    p email
+                    p Преміум
                   .col-xs-4
-                    p email
+                    p Розширений висновок по справі з варіантами можливих дій
                   .col-xs-4
-                    p email
+                    p 1 000 грн
                 .row.rate.vertical-align.premium(data-special="Найкраща пропозиція")
                   radio-input(:modelObject="stepFirst", typeIndex="rate", value="premium", id="premium")
                   .col-xs-4
-                    p email
+                    p Захист прав споживачів
                   .col-xs-4
-                    p email
+                    p Спори з договору позики
                   .col-xs-4
                     p email
           .row
@@ -183,13 +183,11 @@
         loading: false,
         questionEnd: false,
         animationClass: 'start',
-        textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.',
-        textLess: 'Lorem ipsum dolor sit amet. '
+        textMore: 'Суть сервісу "Дом юриста Analytics" полягає в здатності' +
+        '"зімітувати роботу мозку судді" в частині об*єктивного сприйняття ним' +
+        'різного роду юридичної інформації по конкретній спірній ситуації,' +
+        'прийняття відповідного рішення та самонавчання на основі аналізу' +
+        'ефективності таких рішень.'
       }
     },
     created () {
