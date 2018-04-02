@@ -51,7 +51,7 @@
           }
         ],
         textMore: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-        'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
+        'Diam' +
         'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
         'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
         'Diam, eu fringilla enim nunc id dui. Suspendisse a luctus leo.' +
